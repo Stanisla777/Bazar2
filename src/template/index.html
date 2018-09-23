@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Gulp</title>
+    <link href="css/FontAwesoome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <section class="section-top-header section-top-header_padding">
+                <div class="container top-header">
+                    <div class="top-header-left-col">
+                        <p class="top-header-item top-header-left-col__item">USD</p>
+                        <p class="top-header-item top-header-left-col__item">English</p>
+                        <p class="top-header-item top-header-left-col__item">Help</p>
+                    </div>
+                    <div class="top-header-right-col">
+                        <p class="top-header-item top-header-right-col__item top-header-right-col__item_login">Login</p>
+                        <p class="top-header-item top-header-right-col__item top-header-right-col__item_register">Register</p>
+                        <div class="top-header-right-col__icon-bar">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="section-center-header section-center-header_padding">
+                <div class="container center-header">
+                    <div class="center-header-left-col phone-company">
+                        <p>2300 - 3560 - 222</p>
+                    </div>
+                    <div class="center-header-center-col logo-company">
+
+                    </div>
+                    <div class="center-header-right-col order-basket">
+                        <div class="order-basket_icon"></div>
+                        <div class="order-basket_order-count">
+                            <p>0</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <section class="section-bottom-header section-bottom-header_bot-shadow">
+                <div class="container bottom-header">
+                    <div class="bottom-header__product-search wrapper-category-product-search">
+
+                        <div class="wrapper-product-search__category-search wrapper-category-search">
+                            <div class="wrapper-category-search__select">
+                                <div class="wrapper-category-search_icon-list">
+                                    <i class="fa fa-list-ul" aria-hidden="true"></i>
+                                </div>
+                                <input class="wrapper-category-search__input" readonly value="Select a category" type="text"/><!--поле input-->
+                                <div class="wrapper-category-search__triangle-down"></div>
+
+                            </div>
+                            <ul class="wrapper-category-search__list-option"><!--раскрывающийся список-->
+                                <li>Package-1</li>
+                                <li>Package-2</li>
+                                <li>Package-3</li>
+                                <li>Package-4</li>
+                                <li>Package-5</li>
+                                <li>Package-6</li>
+                            </ul>
+
+                        </div>
+                        <div class="wrapper-product-search__product-search wrapper-product-search">
+                            <div class="wrapper-product-search__wrapper-input">
+                                <input class="wrapper-product-search__input" placeholder="Search products..." type="text"/>
+                                <div class="wrapper-product-search__icon-search">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="bottom-header__main-menu main-menu">
+                        <ul class="main-menu__horizontal-menu horizontal-menu">
+                            <li class="horizontal-menu__item horizontal-menu__item_active"><a href="#">home</a></li>
+                            <li class="horizontal-menu__item"><a href="#">furniture</a></li>
+                            <li class="horizontal-menu__item"><a href="#">chair </a></li>
+                            <li class="horizontal-menu__item"><a href="#">table</a></li>
+                            <li class="horizontal-menu__item"><a href="#">sofa</a></li>
+                            <li class="horizontal-menu__item"><a href="#">bedroom</a></li>
+                            <li class="horizontal-menu__item"><a href="#">blog</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+        </header>
+
+        <section class="section-hot-deals">
+            <div class="container">
+                <div class="wrapper-timer-slider wrapper-timer-slider-row-center">
+                    <div class="wrapper-timer wrapper-timer-col-wrapper">
+                        <div class="wrapper-timer__header">
+                            <p>hot deals</p>
+                            <div class="wrapper-timer__pagers">
+                                <div class="wrapper-timer__pagers-item"></div>
+                                <div class="wrapper-timer__pagers-item"></div>
+                                <div class="wrapper-timer__pagers-item"></div>
+                            </div>
+                        </div>
+                        <div class="wrapper-timer__body">
+                            <a class="button button-add-to-cart wrapper-timer__button button_black">
+                                <p>add to cart</p>
+                            </a>
+                            <div class="wrapper-timer__countdown countdown ">
+                                <div class="countdown__item">
+                                    <p>25 <span>days</span></p>
+                                </div>
+                                <div class="countdown__item">
+                                    <p>10 <span>hrs</span></p>
+                                </div>
+                                <div class="countdown__item">
+                                    <p>45 <span>hrs</span></p>
+                                </div>
+                                <div class="countdown__item">
+                                    <p>30 <span>secs</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper-timer__wrapper-quality-rating block-quality-rating">
+                            <p class="wrapper-timer__call-estimate">Aenean Ru Bristique</p>
+                            <div class="wrapper-quality-rating">
+                                <div class="quality-rating">
+                                    <div class="quality-rating__item quality-rating__item_active"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wrapper-timer__footer block-price">
+                            <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_heart"></div>
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                            </div>
+
+                            <div class="wrapper-timer__wrapper-cost-goods wrapper-cost-goods">
+                                <div class="wrapper-cost-goods__crossed-out-price crossed-out-price">$350.00</div>
+                                <div class="wrapper-cost-goods__real-price">$300.00</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="wrapper-slider wrapper-slider-col-wrapper">
+                        <div class="wrapper-slider__header"></div>
+                        <div class="wrapper-slider__center">
+                            <div class="wrapper-slider__wrapper-sentence">
+                                <h2>indoor furniture</h2>
+                                <h3>save up to 50% of all furniture</h3>
+                            </div>
+                        </div>
+                        <div class="wrapper-slider__botttom">
+                            <a class="button  wrapper-slider__button button_color_white">
+                                <p>add to cart</p>
+                            </a>
+                        </div>
+                        <div class="wrapper-slider__pagers">
+                            <div class="wrapper-slider__pagers-arrow wrapper-slider__pagers-arrow-left"></div>
+                            <div class="wrapper-slider__pagers-arrow wrapper-slider__pagers-arrow-right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section-services-for-people">
+            <div class="container">
+                <div class="wrapper-services-for-people row-center">
+                    <div class="wrapper-service-on-site col-wrapper-3">
+                        <div class="wrapper-service-on-site__outer-circle-icons">
+                            <div class="wrapper-service-on-site__icons wrapper-service-on-site__icon_car"></div>
+                        </div>
+
+                        <h2 class="wrapper-service-on-site__title">Free Shipping</h2>
+                        <h3 class="wrapper-service-on-site__subtitle">all order</h3>
+                    </div>
+                    <div class="wrapper-service-on-site col-wrapper-3">
+                        <div class="wrapper-service-on-site__outer-circle-icons">
+                            <div class="wrapper-service-on-site__icons wrapper-service-on-site__icon_car"></div>
+                        </div>
+
+                        <h2 class="wrapper-service-on-site__title">Free Shipping</h2>
+                        <h3 class="wrapper-service-on-site__subtitle">all order</h3>
+                    </div>
+                    <div class="wrapper-service-on-site col-wrapper-3">
+                        <div class="wrapper-service-on-site__outer-circle-icons">
+                            <div class="wrapper-service-on-site__icons wrapper-service-on-site__icon_car"></div>
+                        </div>
+
+                        <h2 class="wrapper-service-on-site__title">Free Shipping</h2>
+                        <h3 class="wrapper-service-on-site__subtitle">all order</h3>
+                    </div>
+                    <div class="wrapper-service-on-site col-wrapper-3">
+                        <div class="wrapper-service-on-site__outer-circle-icons">
+                            <div class="wrapper-service-on-site__icons wrapper-service-on-site__icon_car"></div>
+                        </div>
+
+                        <h2 class="wrapper-service-on-site__title">Free Shipping</h2>
+                        <h3 class="wrapper-service-on-site__subtitle">all order</h3>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section-guest-room">
+            <div class="container">
+                <div class="block-special-collection row-center">
+                    <div class="block-special-collection__col block-special-collection__col_number_1 col-wrapper-6">
+                        <h2 class="block-special-collection__col-1-title">guest room</h2>
+                        <h3 class="block-special-collection__col-1-subtitle">sofa</h3>
+                        <div class="block-special-collection__col-1-discount discount">
+                            <p>-20%</p>
+                        </div>
+                    </div>
+                    <div class="block-special-collection__col block-special-collection__col_number_2 col-wrapper-6">
+                        <div class="special-collection-wrapper-1">
+                            <div class="special-collection-wrapper-1__description">
+                                <h2 class="special-collection-wrapper-1__title">office <span>chair</span></h2>
+                                <p class="special-collection-wrapper-1__description">collection</p>
+                                <p class="special-collection-wrapper-1__price">$200.00</p>
+                            </div>
+                        </div>
+                        <div class="special-collection-wrapper-2">
+                            <div class="special-collection-wrapper-2__description">
+                                <h2 class="special-collection-wrapper-2__title">special <span>collection</span></h2>
+                                <p class="special-collection-wrapper-2__price">save up 45% of furniture</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-product-line ">
+            <div class="container">
+                <div class="wrapper-furniture-tabs">
+                    <h2 class="title_color_orange">new furniture</h2>
+                    <ul class="wrapper-furniture-tabs__tabs furniture-tabs">
+                        <li class="furniture-tabs__item furniture-tabs__item_active"><a href="#">Bed</a></li>
+                        <li class="furniture-tabs__item"><a href="#">Chair</a></li>
+                        <li class="furniture-tabs__item"><a href="#">Sofa</a></li>
+                        <li class="furniture-tabs__item"><a href="#">Table</a></li>
+                        <li class="furniture-tabs__item"><a href="#">Dining</a></li>
+                    </ul>
+                </div>
+
+                <div class="wrapper-product-line row-center">
+
+                    <div class="product-card col-wrapper-3 product-card_sale">
+
+                        <div class="product-card__body">
+                            <img src="img/good-1.jpg" alt="товар"/>
+                            <div class="product-card__button">
+                                <a class="button button_black">
+                                    <p>Quick View</p>
+                                </a>
+                                <a class="button button-add-to-cart button_black">
+                                    <p>add to cart</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card__quality-rating block-quality-rating">
+                            <p class="product-card__rating-title">Aenean Ru Bristique</p>
+                            <div class="wrapper-quality-rating">
+                                <div class="quality-rating">
+                                    <div class="quality-rating__item quality-rating__item_active"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__footer block-price">
+                            <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                            </div>
+
+                            <div class="wrapper-cost-goods">
+                                <div class="wrapper-cost-goods__real-price">$300.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card col-wrapper-3">
+
+                        <div class="product-card__body">
+                            <img src="img/good-1.jpg" alt="товар"/>
+                            <div class="product-card__button">
+                                <a class="button button_black">
+                                    <p>Quick View</p>
+                                </a>
+                                <a class="button button-add-to-cart button_black">
+                                    <p>add to cart</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card__quality-rating block-quality-rating">
+                            <p class="product-card__rating-title">Aenean Ru Bristique</p>
+                            <div class="wrapper-quality-rating">
+                                <div class="quality-rating">
+                                    <div class="quality-rating__item quality-rating__item_active"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__footer block-price">
+                            <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                            </div>
+
+                            <div class="wrapper-cost-goods">
+                                <div class="wrapper-cost-goods__real-price">$300.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card col-wrapper-3">
+
+                        <div class="product-card__body">
+                            <img src="img/good-1.jpg" alt="товар"/>
+                            <div class="product-card__button">
+                                <a class="button button_black">
+                                    <p>Quick View</p>
+                                </a>
+                                <a class="button button-add-to-cart button_black">
+                                    <p>add to cart</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card__quality-rating block-quality-rating">
+                            <p class="product-card__rating-title">Aenean Ru Bristique</p>
+                            <div class="wrapper-quality-rating">
+                                <div class="quality-rating">
+                                    <div class="quality-rating__item quality-rating__item_active"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__footer block-price">
+                            <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                            </div>
+
+                            <div class="wrapper-cost-goods">
+                                <div class="wrapper-cost-goods__real-price">$300.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card col-wrapper-3">
+
+                        <div class="product-card__body">
+                            <img src="img/good-1.jpg" alt="товар"/>
+                            <div class="product-card__button">
+                                <a class="button button_black">
+                                    <p>Quick View</p>
+                                </a>
+                                <a class="button button-add-to-cart button_black">
+                                    <p>add to cart</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card__quality-rating block-quality-rating">
+                            <p class="product-card__rating-title">Aenean Ru Bristique</p>
+                            <div class="wrapper-quality-rating">
+                                <div class="quality-rating">
+                                    <div class="quality-rating__item quality-rating__item_active"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__footer block-price">
+                            <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                            </div>
+
+                            <div class="wrapper-cost-goods">
+                                <div class="wrapper-cost-goods__real-price">$300.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card col-wrapper-3">
+
+                        <div class="product-card__body">
+                            <img src="img/good-1.jpg" alt="товар"/>
+                            <div class="product-card__button">
+                                <a class="button button_black">
+                                    <p>Quick View</p>
+                                </a>
+                                <a class="button button-add-to-cart button_black">
+                                    <p>add to cart</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card__quality-rating block-quality-rating">
+                            <p class="product-card__rating-title">Aenean Ru Bristique</p>
+                            <div class="wrapper-quality-rating">
+                                <div class="quality-rating">
+                                    <div class="quality-rating__item quality-rating__item_active"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__footer block-price">
+                            <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                            </div>
+
+                            <div class="wrapper-cost-goods">
+                                <div class="wrapper-cost-goods__real-price">$300.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card col-wrapper-3">
+
+                        <div class="product-card__body">
+                            <img src="img/good-1.jpg" alt="товар"/>
+                            <div class="product-card__button">
+                                <a class="button button_black">
+                                    <p>Quick View</p>
+                                </a>
+                                <a class="button button-add-to-cart button_black">
+                                    <p>add to cart</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card__quality-rating block-quality-rating">
+                            <p class="product-card__rating-title">Aenean Ru Bristique</p>
+                            <div class="wrapper-quality-rating">
+                                <div class="quality-rating">
+                                    <div class="quality-rating__item quality-rating__item_active"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__footer block-price">
+                            <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                            </div>
+
+                            <div class="wrapper-cost-goods">
+                                <div class="wrapper-cost-goods__real-price">$300.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card col-wrapper-3">
+
+
+                        <div class="product-card__body">
+                            <img src="img/good-1.jpg" alt="товар"/>
+                            <div class="product-card__button">
+                                <a class="button button_black">
+                                    <p>Quick View</p>
+                                </a>
+                                <a class="button button-add-to-cart button_black">
+                                    <p>add to cart</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card__quality-rating block-quality-rating">
+                            <p class="product-card__rating-title">Aenean Ru Bristique</p>
+                            <div class="wrapper-quality-rating">
+                                <div class="quality-rating">
+                                    <div class="quality-rating__item quality-rating__item_active"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__footer block-price">
+                            <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                            </div>
+
+                            <div class="wrapper-cost-goods">
+                                <div class="wrapper-cost-goods__real-price">$300.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card col-wrapper-3">
+
+                        <div class="product-card__body">
+                            <img src="img/good-1.jpg" alt="товар"/>
+                            <div class="product-card__button">
+                                <a class="button button_black">
+                                    <p>Quick View</p>
+                                </a>
+                                <a class="button button-add-to-cart button_black">
+                                    <p>add to cart</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card__quality-rating block-quality-rating">
+                            <p class="product-card__rating-title">Aenean Ru Bristique</p>
+                            <div class="wrapper-quality-rating">
+                                <div class="quality-rating">
+                                    <div class="quality-rating__item quality-rating__item_active"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__footer block-price">
+                            <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                            </div>
+
+                            <div class="wrapper-cost-goods">
+                                <div class="wrapper-cost-goods__real-price">$300.00</div>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+
+
+            </div>
+        </section>
+
+        <section class="section-furniture-gallery">
+            <div class="container">
+
+                <h2 class="title_color title_color_orange">furniture gallery</h2>
+
+                <div class="furniture-gallery-row-center">
+
+                    <div class="furniture-gallery-left-side furniture-gallery-col-wrapper">
+                        <div class="furniture-gallery-left-side__tabs furniture-gallery-left-side__tabs-row-center">
+                            <div class="furniture-gallery-left-side__tabs-item">
+                                <p>featured</p>
+                            </div>
+                            <div class="furniture-gallery-left-side__tabs-item">
+                                <p>top seller</p>
+                            </div>
+                            <div class="furniture-gallery-left-side__tabs-item">
+                                <p>sale off</p>
+                            </div>
+                            <div class="furniture-gallery-left-side__tabs-item">
+                                <p>top rated</p>
+                            </div>
+                        </div>
+
+                        <div class="furniture-gallery-left-side__content">
+                            <div class="furniture-gallery-left-side__icons icons-for-visitors">
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_heart"></div>
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                                <div class="icons-for-visitors__icon icons-for-visitors__icon_busket"></div>
+                            </div>
+
+                            <div class="furniture-gallery-left-side__price-good">
+                                <div class="furniture-gallery-left-side__new-price">
+                                    <p class="furniture-gallery-left-side__new-price-actual-price">$120.00</p>
+                                    <p class="furniture-gallery-left-side__new-price-old-price">$160.00</p>
+                                </div>
+
+                                <div class="furniture-gallery-left-side__rating">
+                                    <div class="block-quality-rating furniture-gallery-left-side__block-raiting">
+                                        <p class="product-card__rating-title">Aenean Ru Bristique</p>
+                                        <div class="wrapper-quality-rating">
+                                            <div class="quality-rating">
+                                                <div class="quality-rating__item quality-rating__item_active"></div>
+                                                <div class="quality-rating__item"></div>
+                                                <div class="quality-rating__item"></div>
+                                                <div class="quality-rating__item"></div>
+                                                <div class="quality-rating__item"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="furniture-gallery-left-side__footer">
+                            <div class="furniture-gallery-left-side__footer-item-arrow footer-item-arrow-left"></div>
+                            <div class="furniture-gallery-left-side__footer-item"></div>
+                            <div class="furniture-gallery-left-side__footer-item"></div>
+                            <div class="furniture-gallery-left-side__footer-item"></div>
+                            <div class="furniture-gallery-left-side__footer-item"></div>
+                            <div class="furniture-gallery-left-side__footer-item"></div>
+                            <div class="furniture-gallery-left-side__footer-item"></div>
+                            <div class="furniture-gallery-left-side__footer-item-arrow footer-item-arrow-right"></div>
+                        </div>
+                    </div>
+
+                    <div class="furniture-gallery-right-side furniture-gallery-col-wrapper">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-latest-blog">
+            <div class="container">
+                <h2 class="title_color title_color_orange section-latest-blog__title">latest blog</h2>
+                <div class="slider-line-under-title">
+                    <div class="slider-line-under-title__line"></div>
+                    <div class="slider-line-under-title__pagers">
+                        <div class="slider-line-under-title__pagers-item slider-line-under-title__pagers-item_active"></div>
+                        <div class="slider-line-under-title__pagers-item"></div>
+                        <div class="slider-line-under-title__pagers-item"></div>
+
+                    </div>
+                </div>
+
+                <div class="slider-logs-row-center">
+                    <div class="blog-col-wrapper">
+                        <div class="blog-col-wrapper__img">
+                            <div class="blog-col-wrapper__img-content">
+                                <div class="blog-col-wrapper__date-rating blog-date-coments">
+                                    <div class="blog-date-coments__date">
+                                        <p class="blog-date-coments__day">15</p>
+                                        <p class="blog-date-coments__month">jan</p>
+                                        <p class="blog-date-coments__year">2017</p>
+                                    </div>
+                                    <div class="blog-date-coments__coments">
+                                        <p class="blog-date-coments__count-coments">4</p>
+                                        <p class="blog-date-coments__coment">Comments</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="blog-col-wrapper__description">
+                            <h3>Products That Fight Static</h3>
+
+                            <p class="blog-col-wrapper__description-p">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
+                                Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in,
+                                ornare enim.
+                            </p>
+
+                            <a class="button  button_black blog-col-wrapper__description-button">
+                                <p>Read More</p>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="blog-col-wrapper">
+                        <div class="blog-col-wrapper__img">
+                            <div class="blog-col-wrapper__img-content">
+                                <div class="blog-col-wrapper__date-rating blog-date-coments">
+                                    <div class="blog-date-coments__date">
+                                        <p class="blog-date-coments__day">15</p>
+                                        <p class="blog-date-coments__month">jan</p>
+                                        <p class="blog-date-coments__year">2017</p>
+                                    </div>
+                                    <div class="blog-date-coments__coments">
+                                        <p class="blog-date-coments__count-coments">4</p>
+                                        <p class="blog-date-coments__coment">Comments</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="blog-col-wrapper__description">
+                            <h3>Products That Fight Static</h3>
+
+                            <p class="blog-col-wrapper__description-p">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
+                                Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in,
+                                ornare enim.
+                            </p>
+
+                            <a class="button  button_black blog-col-wrapper__description-button">
+                                <p>Read More</p>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="blog-col-wrapper">
+                        <div class="blog-col-wrapper__img">
+                            <div class="blog-col-wrapper__img-content">
+                                <div class="blog-col-wrapper__date-rating blog-date-coments">
+                                    <div class="blog-date-coments__date">
+                                        <p class="blog-date-coments__day">15</p>
+                                        <p class="blog-date-coments__month">jan</p>
+                                        <p class="blog-date-coments__year">2017</p>
+                                    </div>
+                                    <div class="blog-date-coments__coments">
+                                        <p class="blog-date-coments__count-coments">4</p>
+                                        <p class="blog-date-coments__coment">Comments</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="blog-col-wrapper__description">
+                            <h3>Products That Fight Static</h3>
+
+                            <p class="blog-col-wrapper__description-p">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
+                                Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in,
+                                ornare enim.
+                            </p>
+
+                            <a class="button  button_black blog-col-wrapper__description-button">
+                                <p>Read More</p>
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-vendors">
+                    <div class="slider-vendors__arrow slider-vendors__arrow_left"></div>
+                    <div class="slider-vendors__wrapper-vendor vendor-row-center">
+                        <div class="vendor-row-center__item-col-wrapper">
+                            <img src="img/vendor-1.png" alt=""/>
+                        </div>
+                        <div class="vendor-row-center__item-col-wrapper">
+                            <img src="img/vendor-1.png" alt=""/>
+                        </div>
+                        <div class="vendor-row-center__item-col-wrapper">
+                            <img src="img/vendor-1.png" alt=""/>
+                        </div>
+                        <div class="vendor-row-center__item-col-wrapper">
+                            <img src="img/vendor-1.png" alt=""/>
+                        </div>
+                        <div class="vendor-row-center__item-col-wrapper">
+                            <img src="img/vendor-1.png" alt=""/>
+                        </div>
+                        <div class="vendor-row-center__item-col-wrapper">
+                            <img src="img/vendor-1.png" alt=""/>
+                        </div>
+
+                    </div>
+                    <div class="slider-vendors__arrow slider-vendors__arrow_right"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section-client-feedback">
+            <div class="container">
+                <h2 class="title_color title_color_orange section-latest-blog__title">latest blog</h2>
+                <div class="slider-line-under-title">
+                    <div class="slider-line-under-title__line"></div>
+                    <div class="slider-line-under-title__pagers">
+                        <div class="slider-line-under-title__pagers-item slider-line-under-title__pagers-item_active"></div>
+                        <div class="slider-line-under-title__pagers-item"></div>
+                        <div class="slider-line-under-title__pagers-item"></div>
+
+                    </div>
+                </div>
+
+                <div class="item-client-feedback">
+                    <div class="item-client-feedback__quotes">
+                        <i class="fa fa-quote-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="item-client-feedback__quotation">
+                        <p>
+                            Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                            magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                            rebum. Stet clita kasd gubergren.
+                        </p>
+                    </div>
+                    <div class="item-client-feedback__wrapper-client wrapper-feedback-client">
+                        <div class="wrapper-feedback-client__foto"></div>
+                        <div class="wrapper-feedback-client__name-position">
+                            <p class="wrapper-feedback-client__name">John Smith</p>
+                            <p class="wrapper-feedback-client__position">Furniture client</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div><!--wrap-->
+
+
+
+
+    <section class="">
+        <div class="container">
+
+        </div>
+    </section>
+
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+
+        var elem_sale = '<div class="product-card__sale"><p>sale</p></div>';
+        $(".product-card").each(function(){
+            if($(this).hasClass('product-card_sale')){
+                $(this).prepend(elem_sale)
+            }
+        });
+        $('.wrapper-category-search__select').on('click',function(){
+
+            $('.wrapper-category-search__list-option').slideToggle();
+        });
+
+        $('.wrapper-category-search__list-option li').on('click',function(){
+            var val = $(this).text();
+            $('.wrapper-category-search__input').val(val);
+            $('.wrapper-category-search__list-option').slideUp();
+
+        });
+    </script>
+</body>
+</html>
