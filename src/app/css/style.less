@@ -1339,9 +1339,24 @@ label {
 }
 
 //Секция product-line
+
+
+
+
+
 .section-product-line{
   padding-top: 30px;
 }
+.row-center_active{
+  display: flex;
+  transition: all 1s ease 0s;
+}
+.wrapper-product-line:not(.row-center_active){
+  display: none;
+  transition: all 1s ease 0s;
+}
+
+
 .wrapper-furniture-tabs{
   display: flex;
   border-bottom: 2px solid #e2e2e2;
@@ -1362,6 +1377,7 @@ label {
     display: flex;
     align-items: center;
     margin-bottom: -2px;
+    border-bottom: 2px solid transparent;
     a{
       color: #2a2a2a;
       font-size: 18px;
