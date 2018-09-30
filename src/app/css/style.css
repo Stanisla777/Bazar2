@@ -1656,8 +1656,77 @@ label {
   margin: 7px;
   width: 24px;
   height: 15px;
-  background: url("../img/SocialIcon.png") center no-repeat;
-  background-size: contain;
+  background: url("../img/visa.jpg") center no-repeat;
+  background-size: cover;
+}
+.section-baner {
+  padding: 30px 0;
+  background-color: #3f3f3f;
+}
+.section-baner__baner-title {
+  text-align: center;
+  font-size: 54px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.section-baner__baner-title span {
+  font-weight: 600;
+}
+.section-baner__offer {
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: 5px;
+}
+.section-baner__offer span {
+  font-weight: 500;
+  color: #d58e32;
+}
+.section-bread-crumbs {
+  background-color: #e2e2e2;
+  padding: 20px 0 20px 30px;
+}
+.bread-crumbs {
+  display: flex;
+}
+.bread-crumbs__item {
+  color: #2a2a2a;
+  font-size: 13px;
+  font-weight: 400;
+  display: flex;
+}
+.bread-crumbs__item:not(:last-child):after {
+  content: ">";
+  font-size: 14px;
+  display: block;
+  margin: 0 10px;
+}
+.bread-crumbs__item:last-child {
+  color: #d58e32;
+  font-weight: 600;
+}
+.wrapper-two-col {
+  display: flex;
+}
+.wrapper-two-col__col-left {
+  flex-grow: 1;
+}
+.wrapper-two-col__col-right {
+  flex-basis: 280px;
+}
+.col-left__product-row-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.col-3-col-wrapper {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(33.33333333% - 30px);
 }
 @media screen and (max-width: 992px) {
   .wrapper-product-line.row-center {
