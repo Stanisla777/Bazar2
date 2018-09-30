@@ -2125,9 +2125,10 @@
             $('.furniture-tabs .furniture-tabs__item').on('click',function(){
 
                 var dat = $(this).attr('data-type');
-                $('.wrapper-product-line[data-type='+dat+']').addClass('row-center_active');
+
+                $('.wrapper-product-line[data-type='+dat+']').addClass('row-center_active').addClass('fadeIn');
                 $('.furniture-tabs__item[data-type='+dat+']').addClass('furniture-tabs__item_active');
-                $('.wrapper-product-line[data-type='+dat+']').siblings('.wrapper-product-line').removeClass('row-center_active');
+                $('.wrapper-product-line[data-type='+dat+']').siblings('.wrapper-product-line').removeClass('row-center_active').removeClass('fadeIn');
                 $('.furniture-tabs__item[data-type='+dat+']').siblings('.furniture-tabs__item').removeClass('furniture-tabs__item_active');
             });
 
