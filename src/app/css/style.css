@@ -1734,6 +1734,12 @@ label {
 .io {
   cursor: pointer;
 }
+.ty {
+  font-size: 20px;
+}
+.jk {
+  text-align: center;
+}
 @media screen and (max-width: 992px) {
   .wrapper-product-line.row-center {
     margin-left: -15px;
