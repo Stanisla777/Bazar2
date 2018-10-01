@@ -49,7 +49,7 @@ gulp.task('build-css', function () {
 gulp.task('build-html', function () {
     gulp.src(config.src+config.html.src)//выборка файлов по конкретному пути
 
-        .pipe(gulp.dest(config.src+config.html.src_dist)) //вывод результирующего файла в папку назначения (dest — пункт назначения)
+        //.pipe(gulp.dest(config.src+config.html.src_dist)) //вывод результирующего файла в папку назначения (dest — пункт назначения)
 
         .pipe(browserSync.reload({//пайпим перезагрузку
             stream:true
