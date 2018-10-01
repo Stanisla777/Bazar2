@@ -1174,8 +1174,8 @@ label {
   }
 }
 .fadeIn {
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   animation-iteration-count: 1;
