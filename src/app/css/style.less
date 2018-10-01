@@ -425,7 +425,7 @@ label {
 //моя сетка
 @margin:15px; //мэрджин по умолчанию
 
-//примесь для любого row(контейнера)
+//примесь для любого row(контейнера), блоки в котором по центру
 .flex-grid-wrap-juf-con-cen(@margin){
   display: flex;
   flex-wrap: wrap;
@@ -539,6 +539,15 @@ label {
 //Элемент row(коробка) неменяющегося класса
 .row-center{
   .flex-grid-wrap-juf-con-cen(@margin);
+}
+
+//Элементы для col
+.grid-mar-count-col(@marg,@coun){
+  @margin:@marg;
+  @count:@coun;
+  margin-left: @margin;
+  margin-right: @margin;
+  .size(12/@count,@margin * 2);
 }
 .min-width(@min_width){
   min-width: @min_width;
@@ -2034,20 +2043,87 @@ label {
     margin: 7px;
     width: 24px;
     height: 15px;
-    background: url("../img/SocialIcon.png")center no-repeat;
-    background-size: contain;
+    background: url("../img/visa.jpg")center no-repeat;
+    background-size: cover;
   }
 }
 
+//Страница карточки товара
 
+.section-baner-crumbs{
 
+}
+.section-baner{
+  padding: 30px 0;
+  background-color: #3f3f3f;
+  &__baner-title{
+    text-align: center;
+    font-size: 54px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    span{
+      font-weight: 600;
+    }
+  }
+  &__offer{
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: 5px;
+    span{
+      font-weight: 500;
+      color: #d58e32;
+    }
+  }
+}
+.section-bread-crumbs{
+  background-color: #e2e2e2;
+  padding: 20px 0 20px 30px;
+}
+.bread-crumbs {
+  display: flex;
+  &__item{
+    color: #2a2a2a;
+    font-size: 13px;
+    font-weight: 400;
+    display: flex;
 
+    &:not(:last-child):after{
+      content: ">";
+      font-size: 14px;
+      display: block;
+      margin: 0 10px;
+    }
+  }
+  &__item{
+    &:last-child{
+      color: #d58e32;
+      font-weight: 600;
+    }
+  }
+}
 
+//секция рабочая область
+.wrapper-two-col{
+  display: flex;
+  &__col-left{
+    flex-grow: 1;
+  }
+  &__col-right{
+    flex-basis: 280px;
+  }
+}
 
+.col-left__product-row-center{
+  .flex-grid-wrap-juf-con-cen(15px);
 
+}
 
-
-
+.col-3-col-wrapper{
+  .grid-mar-count-col(15px,3);
+}
 
 
 
