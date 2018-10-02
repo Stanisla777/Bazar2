@@ -2381,7 +2381,33 @@ label {
   }
 }
 
+.filter{
+  margin-top: 30px;
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
 
+  &__item{
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #959595;
+    padding: 8px 15px;
+    p{
+      display: flex;
+      align-items: center;
+      &:before{
+        content: "\f02c";
+        font-family: "FontAwesome", sans-serif;
+        margin-right: 10px;
+      }
+      font-size: 14px;
+      color: #959595;
+      font-weight: 500;
+    }
+  }
+}
 
 
 
