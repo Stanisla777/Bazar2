@@ -676,7 +676,7 @@
             range: true,
             min: 135,
             max: 1000,
-            values: [ 135, 500 ],
+            values: [ 100, 500 ],
             slide: function( event, ui ) {
                 $( "#price" ).val( "$" + ui.values[ 0 ]);
                 $( "#price-2" ).val( "$" + ui.values[ 1 ] );
@@ -724,10 +724,16 @@
                 $(this).siblings('.filter-size__item').removeClass('filter-size__item_active');
             });
 
+            $('.filter__item').on('click', function () {
+                $(this).addClass('filter__item_active');
+                $(this).siblings('.filter__item').removeClass('filter__item_active');
+            });
 
 
 
-    
+
+
+
 
             var elem_sale = '<div class="product-card__sale"><p>sale</p></div>';
             $(".product-card").each(function () {

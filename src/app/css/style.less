@@ -2128,6 +2128,8 @@ label {
     width: 75%;
     max-width: 850px;
     margin-right: 20px;
+    flex-shrink: 0;
+
   }
   &__col-right{
     flex-grow: 1;
@@ -2405,6 +2407,12 @@ label {
       font-size: 14px;
       color: #959595;
       font-weight: 500;
+    }
+  }
+  &__item_active{
+    border: 1px solid #d58e32;
+    p{
+      color: #d58e32;
     }
   }
 }

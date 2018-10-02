@@ -1815,6 +1815,7 @@ label {
   width: 75%;
   max-width: 850px;
   margin-right: 20px;
+  flex-shrink: 0;
 }
 .wrapper-two-col__col-right {
   flex-grow: 1;
@@ -2066,6 +2067,12 @@ label {
   content: "\f02c";
   font-family: "FontAwesome", sans-serif;
   margin-right: 10px;
+}
+.filter__item_active {
+  border: 1px solid #d58e32;
+}
+.filter__item_active p {
+  color: #d58e32;
 }
 @media screen and (max-width: 992px) {
   .wrapper-product-line.row-center {
