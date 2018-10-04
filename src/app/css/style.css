@@ -1794,9 +1794,6 @@ label {
   color: #d58e32;
   font-weight: 600;
 }
-.display-control {
-  display: flex;
-}
 .title {
   color: #2a2a2a;
   text-transform: uppercase;
@@ -2131,6 +2128,101 @@ label {
 }
 .entry-field {
   display: flex;
+}
+.display-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.display-control__title {
+  width: 45%;
+}
+.display-control__filter {
+  width: calc(100% - 45%);
+  display: flex;
+  justify-content: space-between;
+}
+.display-control__sort-by {
+  display: flex;
+  align-items: center;
+}
+.display-control__label {
+  color: #2a2a2a;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+.display-control__show {
+  display: flex;
+  align-items: center;
+  width: 107px;
+}
+.display-control__view-display {
+  display: flex;
+  border: 1px solid #b7b7b7;
+  height: 32px;
+  padding: 0 5px;
+}
+.display-control__view {
+  display: flex;
+  align-items: center;
+}
+.display-control__view i {
+  color: #363636;
+  font-size: 20px;
+}
+.display-control__view-active i {
+  color: #d58e32;
+}
+.display-control__view:first-child {
+  margin-right: 5px;
+}
+.display-control__show-input {
+  width: 65%!important;
+}
+.wrapper-select {
+  position: relative;
+}
+.wrapper-select__wrapper-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #b7b7b7;
+}
+.wrapper-select__triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000;
+  border-radius: 2px;
+}
+.wrapper-select__input {
+  width: 90%;
+  border: none;
+  color: #b7b7b7;
+  padding-left: 10px;
+  height: 30px;
+}
+.wrapper-select__option {
+  border: 1px solid #b7b7b7;
+  padding-left: 10px;
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+.wrapper-select__option li {
+  margin-bottom: 10px;
+  color: #b7b7b7;
+  cursor: pointer;
+}
+.wrapper-select__option li:first-child {
+  margin-top: 10px;
+}
+.wrapper-option {
+  /*раскрывающийся список*/
+}
+.wrapper-option li {
+  /*поля списка*/
 }
 @media screen and (max-width: 992px) {
   .wrapper-product-line.row-center {
