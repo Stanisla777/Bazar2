@@ -1875,38 +1875,7 @@ label {
   font-weight: 500;
 }
 /*Слайдер диапазон цен*/
-.filter-price {
-  margin-top: 40px;
-}
-.filter-price__slider-range {
-  margin-top: 30px;
-}
-.filter-price__price-display {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-.filter-price__button {
-  background-color: #d58e32;
-}
-.filter-price__button p {
-  text-transform: uppercase;
-  color: #fff;
-}
-.filter-price__display {
-  display: flex;
-  align-items: center;
-  width: 145px;
-  text-align: center;
-  border: 2px solid #e1e1e1;
-  padding: 0;
-}
-.form-control {
-  border: none;
-  width: 50%;
-  font-weight: 600;
-  color: #2a2a2a;
-}
+
 .slider-range {
   /*внешняя полоска*/
   border: 1px solid #d4d4d4;
