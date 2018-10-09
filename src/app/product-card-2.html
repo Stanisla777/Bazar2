@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Gulp</title>
+    <link href="css/FontAwesoome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--<link rel="stylesheet" href="css/jquery-ui.css"/>-->
+</head>
+<body>
+
+<div id="before-load">
+    <!-- Иконка Font Awesome -->
+    <i class="fa fa-spinner" aria-hidden="true"></i>
+</div>
+
+    <div class="wrap">
+        <header class="header">
+            <section class="section-top-header section-top-header_padding">
+                <div class="container top-header">
+                    <div class="top-header-left-col">
+                        <p class="top-header-item top-header-left-col__item">USD</p>
+                        <p class="top-header-item top-header-left-col__item">English</p>
+                        <p class="top-header-item top-header-left-col__item">Help</p>
+                    </div>
+                    <div class="top-header-right-col">
+                        <p class="top-header-item top-header-right-col__item top-header-right-col__item_login">Login</p>
+                        <p class="top-header-item top-header-right-col__item top-header-right-col__item_register">Register</p>
+                        <div class="top-header-right-col__icon-bar">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="section-center-header section-center-header_padding">
+                <div class="container center-header">
+                    <div class="center-header-left-col phone-company">
+                        <p>2300 - 3560 - 222</p>
+                    </div>
+                    <div class="center-header-center-col logo-company">
+
+                    </div>
+                    <div class="center-header-right-col order-basket">
+                        <div class="order-basket_icon"></div>
+                        <div class="order-basket_order-count">
+                            <p>0</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <section class="section-bottom-header section-bottom-header_bot-shadow">
+                <div class="container bottom-header">
+                    <div class="bottom-header__product-search wrapper-category-product-search">
+
+                        <div class="wrapper-product-search__category-search wrapper-category-search">
+                            <div class="wrapper-category-search__select">
+                                <div class="wrapper-category-search_icon-list">
+                                    <i class="fa fa-list-ul" aria-hidden="true"></i>
+                                </div>
+                                <input class="wrapper-category-search__input" readonly value="Select a category" type="text"/><!--поле input-->
+                                <div class="wrapper-category-search__triangle-down"></div>
+
+                            </div>
+                            <ul class="wrapper-category-search__list-option"><!--раскрывающийся список-->
+                                <li>Package-1</li>
+                                <li>Package-2</li>
+                                <li>Package-3</li>
+                                <li>Package-4</li>
+                                <li>Package-5</li>
+                                <li>Package-6</li>
+                            </ul>
+
+                        </div>
+                        <div class="wrapper-product-search__product-search wrapper-product-search">
+                            <div class="wrapper-product-search__wrapper-input">
+                                <input class="wrapper-product-search__input" placeholder="Search products..." type="text"/>
+                                <div class="wrapper-product-search__icon-search">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="bottom-header__main-menu main-menu">
+                        <ul class="main-menu__horizontal-menu horizontal-menu">
+                            <li class="horizontal-menu__item horizontal-menu__item_active"><a href="#">home</a></li>
+                            <li class="horizontal-menu__item"><a href="#">furniture</a></li>
+                            <li class="horizontal-menu__item"><a href="#">chair </a></li>
+                            <li class="horizontal-menu__item"><a href="#">table</a></li>
+                            <li class="horizontal-menu__item"><a href="#">sofa</a></li>
+                            <li class="horizontal-menu__item"><a href="#">bedroom</a></li>
+                            <li class="horizontal-menu__item"><a href="#">blog</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+        </header>
+
+        <section class="section-baner-crumbs">
+            <div class="container">
+                <section class="section-baner">
+                    <h3 class="section-baner__baner-title">bedroom <span>furniture</span></h3>
+                    <p class="section-baner__offer">ALWAYS <span>25%</span> OFF OR MORE</p>
+                </section>
+                <section class="section-bread-crumbs">
+                    <div class="bread-crumbs">
+                        <div class="bread-crumbs__item">Home</div>
+                        <div class="bread-crumbs__item">Furniture</div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="section-product">
+            <div class="container">
+                <div class="wrapper-two-col">
+                    <div class="wrapper-two-col__col-left col-left">
+
+                        <div class="display-control">
+                            <h2 class="display-control__title title">furniture</h2>
+                            <div class="display-control__filter">
+                                <div class="display-control__sort-by">
+                                    <p class="display-control__label">Sort By</p>
+                                    <div class="wrapper-select"><!--контейнер самого селекта-->
+                                        <div class="wrapper-select__wrapper-input">
+                                            <input class="wrapper-select__input" readonly value="Price: Lowest first" type="text"/>
+                                            <div class="wrapper-select__triangle-down"></div>
+                                        </div>
+                                        <ul class="wrapper-select__option"><!--раскрывающийся список-->
+                                            <li>Package-1</li>
+                                            <li>Package-2</li>
+                                            <li>Package-3</li>
+                                            <li>Package-4</li>
+                                            <li>Package-5</li>
+                                            <li>Package-6</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="display-control__show">
+                                    <p class="display-control__label">Show</p>
+                                    <div class="wrapper-select"><!--контейнер самого селекта-->
+                                        <div class="wrapper-select__wrapper-input">
+                                            <input class=" wrapper-select__input display-control__show-input" readonly value="12" type="text"/>
+                                            <div class="wrapper-select__triangle-down"></div>
+                                        </div>
+                                        <ul class="wrapper-select__option"><!--раскрывающийся список-->
+                                            <li>10</li>
+                                            <li>11</li>
+                                            <li>12</li>
+                                            <li>13</li>
+                                            <li>14</li>
+                                            <li>15</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="display-control__view-display">
+                                    <a href="" class="display-control__view display-control__view-active">
+                                        <i class="fa fa-th-list" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="product-card.html" class="display-control__view display-control__view-table">
+                                        <i class="fa fa-th-large" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-left__product-view-table product_view-table_sale">
+
+                            <div class="product_view-table product_view-table_sale">
+
+                                <div class="product_view-table__img">
+
+                                    <img src="img/good-1.jpg" alt=""/>
+                                </div>
+                                <div class="product_view-table__content">
+                                    <div class="product_view-table__body">
+                                        <h3 class="product_view-table__title">Aenean Ru Bristique</h3>
+                                        <p class="product_view-table__price">$350.00</p>
+
+                                        <div class="quality-rating product_view-table__rating">
+                                            <div class="quality-rating__item quality-rating__item_active"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                        </div>
+                                        <p class="product_view-table__description">
+                                            Faded short sleeves t-shirt with high neckline. Soft and stretchy material
+                                            for a
+                                            comfortable fit. Accessorize with a straw hat and you're ready.
+                                        </p>
+                                    </div>
+                                    <div class="product_view-table__footer">
+                                        <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                            <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                            <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                                            <a class="button button-add-to-cart button_black">
+                                                <p>add to cart</p>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product_view-table product_view-table_sale">
+                                <div class="product_view-table__img">
+                                    <img src="img/good-1.jpg" alt=""/>
+                                </div>
+                                <div class="product_view-table__content">
+                                    <div class="product_view-table__body">
+                                        <h3 class="product_view-table__title">Aenean Ru Bristique</h3>
+                                        <p class="product_view-table__price">$350.00</p>
+
+                                        <div class="quality-rating product_view-table__rating">
+                                            <div class="quality-rating__item quality-rating__item_active"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                        </div>
+                                        <p class="product_view-table__description">
+                                            Faded short sleeves t-shirt with high neckline. Soft and stretchy material
+                                            for a
+                                            comfortable fit. Accessorize with a straw hat and you're ready.
+                                        </p>
+                                    </div>
+                                    <div class="product_view-table__footer">
+                                        <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                            <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                            <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                                            <a class="button button-add-to-cart button_black">
+                                                <p>add to cart</p>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product_view-table product_view-table_sale">
+                                <div class="product_view-table__img">
+
+                                    <img src="img/good-1.jpg" alt=""/>
+                                </div>
+                                <div class="product_view-table__content">
+                                    <div class="product_view-table__body">
+                                        <h3 class="product_view-table__title">Aenean Ru Bristique</h3>
+                                        <p class="product_view-table__price">$350.00</p>
+
+                                        <div class="quality-rating product_view-table__rating">
+                                            <div class="quality-rating__item quality-rating__item_active"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                        </div>
+                                        <p class="product_view-table__description">
+                                            Faded short sleeves t-shirt with high neckline. Soft and stretchy material
+                                            for a
+                                            comfortable fit. Accessorize with a straw hat and you're ready.
+                                        </p>
+                                    </div>
+                                    <div class="product_view-table__footer">
+                                        <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                            <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                            <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                                            <a class="button button-add-to-cart button_black">
+                                                <p>add to cart</p>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product_view-table product_view-table_sale">
+                                <div class="product_view-table__img">
+                                    <img src="img/good-1.jpg" alt=""/>
+                                </div>
+                                <div class="product_view-table__content">
+                                    <div class="product_view-table__body">
+                                        <h3 class="product_view-table__title">Aenean Ru Bristique</h3>
+                                        <p class="product_view-table__price">$350.00</p>
+
+                                        <div class="quality-rating product_view-table__rating">
+                                            <div class="quality-rating__item quality-rating__item_active"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                        </div>
+                                        <p class="product_view-table__description">
+                                            Faded short sleeves t-shirt with high neckline. Soft and stretchy material
+                                            for a
+                                            comfortable fit. Accessorize with a straw hat and you're ready.
+                                        </p>
+                                    </div>
+                                    <div class="product_view-table__footer">
+                                        <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                            <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                            <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                                            <a class="button button-add-to-cart button_black">
+                                                <p>add to cart</p>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product_view-table product_view-table_sale">
+                                <div class="product_view-table__img">
+                                    <img src="img/good-1.jpg" alt=""/>
+                                </div>
+                                <div class="product_view-table__content">
+                                    <div class="product_view-table__body">
+                                        <h3 class="product_view-table__title">Aenean Ru Bristique</h3>
+                                        <p class="product_view-table__price">$350.00</p>
+
+                                        <div class="quality-rating product_view-table__rating">
+                                            <div class="quality-rating__item quality-rating__item_active"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                        </div>
+                                        <p class="product_view-table__description">
+                                            Faded short sleeves t-shirt with high neckline. Soft and stretchy material
+                                            for a
+                                            comfortable fit. Accessorize with a straw hat and you're ready.
+                                        </p>
+                                    </div>
+                                    <div class="product_view-table__footer">
+                                        <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                            <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                            <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                                            <a class="button button-add-to-cart button_black">
+                                                <p>add to cart</p>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product_view-table product_view-table_sale">
+                                <div class="product_view-table__img">
+                                    <img src="img/good-1.jpg" alt=""/>
+                                </div>
+                                <div class="product_view-table__content">
+                                    <div class="product_view-table__body">
+                                        <h3 class="product_view-table__title">Aenean Ru Bristique</h3>
+                                        <p class="product_view-table__price">$350.00</p>
+
+                                        <div class="quality-rating product_view-table__rating">
+                                            <div class="quality-rating__item quality-rating__item_active"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                            <div class="quality-rating__item"></div>
+                                        </div>
+                                        <p class="product_view-table__description">
+                                            Faded short sleeves t-shirt with high neckline. Soft and stretchy material
+                                            for a
+                                            comfortable fit. Accessorize with a straw hat and you're ready.
+                                        </p>
+                                    </div>
+                                    <div class="product_view-table__footer">
+                                        <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
+                                            <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
+                                            <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
+                                            <a class="button button-add-to-cart button_black">
+                                                <p>add to cart</p>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="wrapper-two-col__col-right">
+
+                    <div class="filter-category">
+                        <h3 class="subtitle col-left__subtitle">Filter By categories</h3>
+
+                        <div class="filter-category__item">
+                            <p class="filter-category__category">Sofa</p>
+
+                            <div class="filter-category__count"><span>3</span></div>
+                        </div>
+                        <div class="filter-category__item">
+                            <p class="filter-category__category">Sofa</p>
+
+                            <div class="filter-category__count"><span>3</span></div>
+                        </div>
+                        <div class="filter-category__item">
+                            <p class="filter-category__category">Sofa</p>
+
+                            <div class="filter-category__count"><span>3</span></div>
+                        </div>
+                        <div class="filter-category__item">
+                            <p class="filter-category__category">Sofa</p>
+
+                            <div class="filter-category__count"><span>3</span></div>
+                        </div>
+                        <div class="filter-category__item">
+                            <p class="filter-category__category">Sofa</p>
+
+                            <div class="filter-category__count"><span>3</span></div>
+                        </div>
+
+                    </div>
+                    <div class="filter-price">
+                        <h3 class="subtitle col-left__subtitle">Filter By Price</h3>
+
+                        <div class="filter-price__slider-range ">
+                            <div class="slider-range" id="slider-range"></div>
+                            <div class="filter-price__price-display">
+                                <a class="button filter-price__button">
+                                    <p>Filter</p>
+                                </a>
+
+
+                                <div class="filter-price__display">
+                                    <input class="form-control" name="price" id="price">
+
+                                    <p> - </p>
+                                    <input class="form-control" name="price" id="price-2">
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="filter-color">
+                        <h3 class="subtitle col-left__subtitle">Filter By color</h3>
+
+                        <div class="filter-color__item">
+                            <div class="filter-color__color filter-color__color_red"></div>
+                            <div class="filter-color__value">Red</div>
+                        </div>
+
+                        <div class="filter-color__item">
+                            <div class="filter-color__color filter-color__color_black"></div>
+                            <div class="filter-color__value">Black</div>
+                        </div>
+
+                        <div class="filter-color__item">
+                            <div class="filter-color__color filter-color__color_yellow"></div>
+                            <div class="filter-color__value">Yellow</div>
+                        </div>
+
+                        <div class="filter-color__item">
+                            <div class="filter-color__color filter-color__color_red"></div>
+                            <div class="filter-color__value">Red</div>
+                        </div>
+
+                        <div class="filter-color__item">
+                            <div class="filter-color__color filter-color__color_black"></div>
+                            <div class="filter-color__value">Black</div>
+                        </div>
+
+                        <div class="filter-color__item">
+                            <div class="filter-color__color filter-color__color_yellow"></div>
+                            <div class="filter-color__value">Yellow</div>
+                        </div>
+                    </div>
+
+                    <div class="filter-size">
+                        <h3 class="subtitle col-left__subtitle">Filter By size</h3>
+
+                        <div class="filter-size__item ">
+                            <p class="filter-size__category">S</p>
+
+                            <div class="filter-size__count"><span>3</span></div>
+                        </div>
+
+                        <div class="filter-size__item ">
+                            <p class="filter-size__category">M</p>
+
+                            <div class="filter-size__count"><span>3</span></div>
+                        </div>
+
+                        <div class="filter-size__item ">
+                            <p class="filter-size__category">L</p>
+
+                            <div class="filter-size__count"><span>3</span></div>
+                        </div>
+
+                        <div class="filter-size__item ">
+                            <p class="filter-size__category">XL</p>
+
+                            <div class="filter-size__count"><span>3</span></div>
+                        </div>
+
+                        <div class="filter-size__item ">
+                            <p class="filter-size__category">XX</p>
+
+                            <div class="filter-size__count"><span>3</span></div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="filter">
+                        <h3 class="subtitle col-left__subtitle">Filter By size</h3>
+
+                        <div class="filter__wrapper">
+                            <div class="filter__item">
+                                <p>Table</p>
+                            </div>
+                            <div class="filter__item">
+                                <p>Chair</p>
+                            </div>
+                            <div class="filter__item">
+                                <p>Hand Bag</p>
+                            </div>
+                            <div class="filter__item">
+                                <p>Women</p>
+                            </div>
+                            <div class="filter__item">
+                                <p>Fashion</p>
+                            </div>
+                            <div class="filter__item">
+                                <p>Clothes</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="featured-product">
+                        <div class="featured-product__item">
+                            <div class="featured-product__img">
+                                <img src="img/good-1.jpg" alt=""/>
+                            </div>
+                            <div class="featured-product__content">
+                                <p class="featured-product__name-product">Office Chair</p>
+
+                                <p class="featured-product__price-product">$350.00</p>
+
+                                <div class="featured-product__rating quality-rating">
+                                    <div class="quality-rating__item quality-rating__item_active"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                </div>
+                                <a class="button button_black featured-product__button">
+                                    <p>add to cart</p>
+                                </a>
+
+
+                            </div>
+
+                        </div>
+                        <div class="featured-product__item">
+                            <div class="featured-product__img">
+                                <img src="img/good-1.jpg" alt=""/>
+                            </div>
+                            <div class="featured-product__content">
+                                <p class="featured-product__name-product">Office Chair</p>
+
+                                <p class="featured-product__price-product">$350.00</p>
+
+                                <div class="featured-product__rating quality-rating">
+                                    <div class="quality-rating__item quality-rating__item_active"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                </div>
+                                <a class="button button_black featured-product__button">
+                                    <p>add to cart</p>
+                                </a>
+
+
+                            </div>
+
+                        </div>
+                        <div class="featured-product__item">
+                            <div class="featured-product__img">
+                                <img src="img/good-1.jpg" alt=""/>
+                            </div>
+                            <div class="featured-product__content">
+                                <p class="featured-product__name-product">Office Chair</p>
+
+                                <p class="featured-product__price-product">$350.00</p>
+
+                                <div class="featured-product__rating quality-rating">
+                                    <div class="quality-rating__item quality-rating__item_active"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                    <div class="quality-rating__item"></div>
+                                </div>
+                                <a class=" button button_black featured-product__button">
+                                    <p>add to cart</p>
+                                </a>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    </div>
+                    </div>
+
+                <div class="slider-vendors">
+                    <div class="slider-vendors__arrow slider-vendors__arrow_left"></div>
+                    <div class="slider-vendors__wrapper-vendor vendor-row-center">
+                        <div class="vendor-row-center__item-col-wrapper">
+                            <img src="img/vendor-1.png" alt="">
+                        </div>
+                        <div class="vendor-row-center__item-col-wrapper">
+                            <img src="img/vendor-1.png" alt="">
+                        </div>
+                        <div class="vendor-row-center__item-col-wrapper">
+                            <img src="img/vendor-1.png" alt="">
+                        </div>
+                        <div class="vendor-row-center__item-col-wrapper">
+                            <img src="img/vendor-1.png" alt="">
+                        </div>
+                        <div class="vendor-row-center__item-col-wrapper">
+                            <img src="img/vendor-1.png" alt="">
+                        </div>
+                        <div class="vendor-row-center__item-col-wrapper">
+                            <img src="img/vendor-1.png" alt="">
+                        </div>
+
+                    </div>
+                    <div class="slider-vendors__arrow slider-vendors__arrow_right"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section-news-letter">
+            <div class="container">
+                <div class="wrapper-news-letter">
+                    <p class="wrapper-news-letter__title">NEWSLETTER:</p>
+                    <div class="wrapper-news-letter__entry-field entry-field">
+                        <div class="entry-field__icon"></div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <section class="footer">
+            <div class="footer-section-1">
+                <div class="container">
+                    <div class="footer__menu">
+                        <div class="footer__menu-col">
+                            <div class="footer__menu-title">INFORMATION</div>
+                            <div class="footer__menu-item"><a href="#">About us</a></div>
+                            <div class="footer__menu-item"><a href="#">Privacy</a></div>
+                            <div class="footer__menu-item"><a href="#">Conditions</a></div>
+                            <div class="footer__menu-item"><a href="#">Online support</a></div>
+                        </div>
+
+                        <div class="footer__menu-col">
+                            <div class="footer__menu-title">MY ACCOUNT</div>
+                            <div class="footer__menu-item"><a href="#">About us</a></div>
+                            <div class="footer__menu-item"><a href="#">Privacy</a></div>
+                            <div class="footer__menu-item"><a href="#">Conditions</a></div>
+                            <div class="footer__menu-item"><a href="#">Online support</a></div>
+                        </div>
+
+                        <div class="footer__menu-col">
+                            <div class="footer__menu-title">INFORMATION</div>
+                            <div class="footer__menu-item"><a href="#">About us</a></div>
+                            <div class="footer__menu-item"><a href="#">Privacy</a></div>
+                            <div class="footer__menu-item"><a href="#">Conditions</a></div>
+                            <div class="footer__menu-item"><a href="#">Online support</a></div>
+                        </div>
+
+                        <div class="footer__menu-col">
+                            <div class="footer__menu-title">ORDERS</div>
+                            <div class="footer__menu-item"><a href="#">About us</a></div>
+                            <div class="footer__menu-item"><a href="#">Privacy</a></div>
+                            <div class="footer__menu-item"><a href="#">Conditions</a></div>
+                            <div class="footer__menu-item"><a href="#">Online support</a></div>
+
+                            <div class="footer__payment-method payment-method">
+                                <div class="payment-method__item"></div>
+                                <div class="payment-method__item"></div>
+                                <div class="payment-method__item"></div>
+                                <div class="payment-method__item"></div>
+                                <div class="payment-method__item"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer-section-2">
+                <div class="container">
+                    <div class="footer-section-2__copyright">
+                        <div class="footer-section-2__col-left"></div>
+                        <p class="footer-section-2__title">Copyright 2016 Bazar | All Rights Reserved</p>
+                        <div class="wrapper-social-icon">
+                            <div class="wrapper-social-icon__item "></div>
+                            <div class="wrapper-social-icon__item "></div>
+                            <div class="wrapper-social-icon__item "></div>
+                            <div class="wrapper-social-icon__item "></div>
+                            <div class="wrapper-social-icon__item "></div>
+                            <div class="wrapper-social-icon__item "></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+    </div><!--wrap-->
+
+
+
+
+    <section class="">
+        <div class="container">
+
+        </div>
+    </section>
+
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script>
+
+
+
+        $(document).ready(function() {
+
+            $('#before-load').find('i').fadeOut().end().delay(20).fadeOut('slow');
+
+            $('.wrapper-select__triangle-down, .wrapper-select').on('click',function(){
+
+
+                $(this).find('.wrapper-select__option').slideToggle();
+            });
+
+            $('.wrapper-select__option li').on('click',function(){
+                var val = $(this).text();
+                $(this).parents('.wrapper-select').find('.wrapper-select__input').val(val);
+                $(this).find('.wrapper-select__option').slideUp();
+
+            });
+
+
+
+
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 135,
+            max: 1000,
+            values: [ 100, 500 ],
+            slide: function( event, ui ) {
+                $( "#price" ).val( "$" + ui.values[ 0 ]);
+                $( "#price-2" ).val( "$" + ui.values[ 1 ] );
+
+            }
+        });
+            $("#price").val("$" + $("#slider-range").slider("values", 0));
+
+            $("#price-2").val("$" + $("#slider-range").slider("values", 1));
+
+            $('.filter-price__button').on('click',function(){
+                $('.product-card').show();
+                var price = $('#price').val();
+                price = parseFloat(price.slice(1));
+
+                var price_2 = $('#price-2').val();
+                price_2 = parseFloat(price_2.slice(1));
+
+                var total_price = price_2 - price;
+                console.log(total_price);
+
+                $('.col-left__product-row-center .product-card').each(function(){
+                    var prices = $(this).find('.wrapper-cost-goods__real-price').text();
+                    prices = parseFloat(prices.slice(1));
+                    if(prices>price_2||prices<price){
+                        $(this).hide();
+                    }
+                });
+
+            });
+
+
+            $('.filter-color__item').on('click',function(){
+                $(this).addClass('filter-color__item_active');
+                $(this).siblings('.filter-color__item').removeClass('filter-color__item_active');
+            });
+
+            $('.filter-category__item').on('click', function () {
+                $(this).addClass('filter-category__item_active');
+                $(this).siblings('.filter-category__item').removeClass('filter-category__item_active');
+            });
+
+            $('.filter-size__item').on('click', function () {
+                $(this).addClass('filter-size__item_active');
+                $(this).siblings('.filter-size__item').removeClass('filter-size__item_active');
+            });
+
+            $('.filter__item').on('click', function () {
+                $(this).addClass('filter__item_active');
+                $(this).siblings('.filter__item').removeClass('filter__item_active');
+            });
+
+
+
+
+
+
+
+            var elem_sale = '<div class="product-card__sale"><p>sale</p></div>';
+            $(".product-card").each(function () {
+                if ($(this).hasClass('product-card_sale')) {
+                    $(this).prepend(elem_sale)
+                }
+            });
+            $('.wrapper-category-search__select').on('click', function () {
+
+                $('.wrapper-category-search__list-option').slideToggle();
+            });
+
+            $('.wrapper-category-search__list-option li').on('click', function () {
+                var val = $(this).text();
+                $('.wrapper-category-search__input').val(val);
+                $('.wrapper-category-search__list-option').slideUp();
+
+            });
+
+            $('.furniture-tabs a').click(function(event){
+                event.preventDefault(event);
+            });
+            $('.furniture-tabs .furniture-tabs__item').on('click',function(){
+
+                var dat = $(this).attr('data-type');
+                $('.wrapper-product-line[data-type='+dat+']').addClass('row-center_active');
+                $('.furniture-tabs__item[data-type='+dat+']').addClass('furniture-tabs__item_active');
+                $('.wrapper-product-line[data-type='+dat+']').siblings('.wrapper-product-line').removeClass('row-center_active');
+                $('.furniture-tabs__item[data-type='+dat+']').siblings('.furniture-tabs__item').removeClass('furniture-tabs__item_active');
+            });
+
+
+
+        })
+    </script>
+</body>
+</html>

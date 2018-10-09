@@ -47,6 +47,14 @@ footer {
   padding: 0 15px;
   position: relative;
 }
+.container-2 {
+  zoom: 1;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
 .container-pad-0 {
   zoom: 1;
   width: 100%;
@@ -1875,7 +1883,38 @@ label {
   font-weight: 500;
 }
 /*Слайдер диапазон цен*/
-
+.filter-price {
+  margin-top: 40px;
+}
+.filter-price__slider-range {
+  margin-top: 30px;
+}
+.filter-price__price-display {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.filter-price__button {
+  background-color: #d58e32;
+}
+.filter-price__button p {
+  text-transform: uppercase;
+  color: #fff;
+}
+.filter-price__display {
+  display: flex;
+  align-items: center;
+  width: 145px;
+  text-align: center;
+  border: 2px solid #e1e1e1;
+  padding: 0;
+}
+.form-control {
+  border: none;
+  width: 50%;
+  font-weight: 600;
+  color: #2a2a2a;
+}
 .slider-range {
   /*внешняя полоска*/
   border: 1px solid #d4d4d4;
@@ -2329,6 +2368,93 @@ label {
   to {
     transform: rotate(360deg);
   }
+}
+/*новая страница*/
+.header__section-top {
+  background-color: #434343;
+  padding: 13px 0;
+}
+.header__cols {
+  display: flex;
+  justify-content: space-between;
+}
+.header__language {
+  display: flex;
+}
+.header__language-item {
+  font-size: 13px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.header__language-item:after {
+  content: "\f0d7";
+  font-family: "FontAwesome", sans-serif;
+  display: block;
+  margin-left: 8px;
+}
+.header__language-item:not(:first-child):before {
+  content: "";
+  height: 22px;
+  width: 1px;
+  display: block;
+  background-color: #fff;
+  margin: 0 14px;
+}
+.header__registry {
+  display: flex;
+}
+.header__registry-item {
+  display: flex;
+  align-items: center;
+}
+.header__registry-item i {
+  color: #fff;
+  margin-right: 10px;
+}
+.header__registry-item p {
+  font-size: 13px;
+  color: #fff;
+}
+.header__registry-item:not(:last-child) {
+  margin-right: 38px;
+}
+.header__icon-bars:before {
+  content: "\f0c9";
+  font-family: "FontAwesome", sans-serif;
+  width: 17px;
+  height: 13px;
+  display: block;
+  color: #fff;
+  font-size: 19px;
+}
+.menu {
+  display: flex;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ul li:not(:first-child):after {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 1px;
+  background: #000;
+  vertical-align: middle;
+  position: absolute;
+}
+ul li a {
+  color: #000;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  padding: 0 10px;
 }
 @media screen and (max-width: 992px) {
   .wrapper-product-line.row-center {
