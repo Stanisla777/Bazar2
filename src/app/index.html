@@ -150,26 +150,26 @@
                                         <img src="img/good-1.jpg" alt=""/>
                                     </div>
                                     <div class="detailed-card__pager wrapper-slide">
-                                        <img src="img/good-1.jpg" alt=""/>
+                                        <img src="img/good-2.jpg" alt=""/>
                                     </div>
                                     <div class="detailed-card__pager wrapper-slide">
-                                        <img src="img/good-1.jpg" alt=""/>
+                                        <img src="img/good-3.jpg" alt=""/>
                                     </div>
                                     <div class="detailed-card__pager wrapper-slide">
-                                        <img src="img/good-1.jpg" alt=""/>
+                                        <img src="img/good-4.jpg" alt=""/>
                                     </div>
 
                                     <div class="detailed-card__pager wrapper-slide">
-                                        <img src="img/good-1.jpg" alt=""/>
+                                        <img src="img/good-5.jpg" alt=""/>
                                     </div>
                                     <div class="detailed-card__pager wrapper-slide">
-                                        <img src="img/good-1.jpg" alt=""/>
+                                        <img src="img/good-6.jpg" alt=""/>
                                     </div>
                                     <div class="detailed-card__pager wrapper-slide">
-                                        <img src="img/good-1.jpg" alt=""/>
+                                        <img src="img/good-7.jpg" alt=""/>
                                     </div>
                                     <div class="detailed-card__pager wrapper-slide">
-                                        <img src="img/good-1.jpg" alt=""/>
+                                        <img src="img/good-8.jpg" alt=""/>
                                     </div>
                                 </div>
                             </div>
@@ -263,29 +263,37 @@
 
 //        Слайдер
         function slider(){
-             $('.detailed-card__pagers .bxslider').bxSlider({
+             slide = $('.detailed-card__pagers .bxslider').bxSlider({
                 mode:"horizontal",
                 slideMargin:10,
                 controls: true,
                 pager:false,
-//            onSliderLoad: function(){//чтобы стрелочки были по середине
-//                var width = $(".wrapper-slider .bx-pager").width();
-//                $(".wrapper-slider .bx-pager").css('marginLeft',-width/2);
-//                $('.wrapper-slider .wrapper-slide').css('display','block');
-//            },
                 minSlides:1,
                 maxSlides:4,
                 slideWidth:89,
                 nextText:"",
                 prevText:"",
-
-
-
-
                 oneToOneTouch: false
 
             });
         }
+
+        function reload(){
+            slide = $('.detailed-card__pagers .bxslider').bxSlider({
+                mode:"horizontal",
+                slideMargin:10,
+                controls: true,
+                pager:false,
+                minSlides:1,
+                maxSlides:4,
+                slideWidth:89,
+                nextText:"",
+                prevText:"",
+                oneToOneTouch: false
+
+            });
+        }
+
 
         $('.detailed-card__slider .bxslider').bxSlider({
             mode: "horizontal",
@@ -294,9 +302,11 @@
             onSliderLoad: function () {
                 $('.bx-controls:nth-child(2)').find('.bx-controls-direction').addClass('ret');
                 slider();
+//                slide.redrawSlider();
             },
             onSlideAfter: function () {
 
+//                slide.destroySlider();
             },
 
             nextText: "",
@@ -304,11 +314,10 @@
         });
 
 
-        $('.detailed-card__pager').on('click',function(){
+        $('.furniture__title').on('click',function(){
+            reload();
 
 
-//           var src = $(this).find('img');
-//            slider();
         });
 
 
