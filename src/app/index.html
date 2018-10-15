@@ -262,8 +262,8 @@
         });
 
 //        Слайдер
-//        function slider(){
-            slide = $('.detailed-card__pagers .bxslider').bxSlider({
+        function slider(){
+             $('.detailed-card__pagers .bxslider').bxSlider({
                 mode:"horizontal",
                 slideMargin:10,
                 controls: true,
@@ -285,7 +285,7 @@
                 oneToOneTouch: false
 
             });
-//        }
+        }
 
         $('.detailed-card__slider .bxslider').bxSlider({
             mode: "horizontal",
@@ -293,7 +293,7 @@
             pager: false,
             onSliderLoad: function () {
                 $('.bx-controls:nth-child(2)').find('.bx-controls-direction').addClass('ret');
-                slide.reloadSlider();
+                slider();
             },
             onSlideAfter: function () {
 
