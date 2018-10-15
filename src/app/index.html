@@ -1,690 +1,318 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>Gulp</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="google" value="notranslate">
+    <meta name="theme-color" content="#ffffff">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     <link href="css/FontAwesoome/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
-    <!--<link rel="stylesheet" href="css/jquery-ui.css"/>-->
 </head>
 <body>
-    <div class="wrap">
-        <header class="header">
-            <section class="section-top-header section-top-header_padding">
-                <div class="container top-header">
-                    <div class="top-header-left-col">
-                        <p class="top-header-item top-header-left-col__item">USD</p>
-                        <p class="top-header-item top-header-left-col__item">English</p>
-                        <p class="top-header-item top-header-left-col__item">Help</p>
-                    </div>
-                    <div class="top-header-right-col">
-                        <p class="top-header-item top-header-right-col__item top-header-right-col__item_login">Login</p>
-                        <p class="top-header-item top-header-right-col__item top-header-right-col__item_register">Register</p>
-                        <div class="top-header-right-col__icon-bar">
-                            <i class="fa fa-bars" aria-hidden="true"></i>
-                        </div>
+<div class="wrap">
+    <header class="header">
+        <section class="header__section-top">
+            <div class="container-2">
+                <div class="header__cols">
+                    <div class="header__language">
+                        <div class="header__language-item">USD</div>
+                        <div class="header__language-item">English</div>
+                        <div class="header__language-item">Help</div>
                     </div>
 
+                    <div class="header__registry">
+                        <a href="#" class="header__registry-item">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+
+                            <p>Login</p>
+                        </a>
+                        <a href="#" class="header__registry-item">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+
+                            <p>Register</p>
+                        </a>
+                        <a href="#" class="header__icon-bars header__registry-item"></a>
+                    </div>
                 </div>
-            </section>
-            <section class="section-center-header section-center-header_padding">
-                <div class="container center-header">
-                    <div class="center-header-left-col phone-company">
+            </div>
+        </section>
+        <section class="header__section-bottom">
+            <div class="container-2">
+                <div class="header__section-bottom-row">
+                    <div class="header__section-bottom-col header__tel">
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
+
                         <p>2300 - 3560 - 222</p>
                     </div>
-                    <div class="center-header-center-col logo-company">
-
-                    </div>
-                    <div class="center-header-right-col order-basket">
-                        <div class="order-basket_icon"></div>
-                        <div class="order-basket_order-count">
+                    <div class="header__logo logo"></div>
+                    <div class="header__section-bottom-col header__basket">
+                        <div class="header__icon-basket">
+                            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                        </div>
+                        <div class="header__amount-buy">
                             <p>0</p>
                         </div>
-
                     </div>
-
                 </div>
-            </section>
-            <section class="section-bottom-header section-bottom-header_bot-shadow">
-                <div class="container bottom-header">
-                    <div class="bottom-header__product-search wrapper-category-product-search">
 
-                        <div class="wrapper-product-search__category-search wrapper-category-search">
-                            <div class="wrapper-category-search__select">
-                                <div class="wrapper-category-search_icon-list">
-                                    <i class="fa fa-list-ul" aria-hidden="true"></i>
-                                </div>
-                                <input class="wrapper-category-search__input" readonly value="Select a category" type="text"/><!--поле input-->
-                                <div class="wrapper-category-search__triangle-down"></div>
+            </div>
+        </section>
+    </header>
 
+    <section class="section-menu">
+        <div class="container-2">
+            <div class="section-menu__row">
+                <div class="section-menu__col-search">
+
+                    <div class="section-menu__wrapper-select wrapper-select"><!--контейнер самого селекта-->
+                        <div class="section-menu__wrapper-input wrapper-select__wrapper-input">
+                            <div class="section-menu__icon-list">
+                                <i class="fa fa-list-ul" aria-hidden="true"></i>
                             </div>
-                            <ul class="wrapper-category-search__list-option"><!--раскрывающийся список-->
-                                <li>Package-1</li>
-                                <li>Package-2</li>
-                                <li>Package-3</li>
-                                <li>Package-4</li>
-                                <li>Package-5</li>
-                                <li>Package-6</li>
-                            </ul>
-
+                            <input class="wrapper-select__input section-menu__input" readonly="" value="Select a category" type="text">
+                            <div class="wrapper-select__triangle-down section-menu__triangle-down "></div>
                         </div>
-                        <div class="wrapper-product-search__product-search wrapper-product-search">
-                            <div class="wrapper-product-search__wrapper-input">
-                                <input class="wrapper-product-search__input" placeholder="Search products..." type="text"/>
-                                <div class="wrapper-product-search__icon-search">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="bottom-header__main-menu main-menu">
-                        <ul class="main-menu__horizontal-menu horizontal-menu">
-                            <li class="horizontal-menu__item horizontal-menu__item_active"><a href="#">home</a></li>
-                            <li class="horizontal-menu__item"><a href="#">furniture</a></li>
-                            <li class="horizontal-menu__item"><a href="#">chair </a></li>
-                            <li class="horizontal-menu__item"><a href="#">table</a></li>
-                            <li class="horizontal-menu__item"><a href="#">sofa</a></li>
-                            <li class="horizontal-menu__item"><a href="#">bedroom</a></li>
-                            <li class="horizontal-menu__item"><a href="#">blog</a></li>
+                        <ul class="wrapper-select__option section-menu__option" style="display: none;"><!--раскрывающийся список-->
+                            <li>Package-1</li>
+                            <li>Package-2</li>
+                            <li>Package-3</li>
+                            <li>Package-4</li>
+                            <li>Package-5</li>
+                            <li>Package-6</li>
                         </ul>
 
                     </div>
+
+
+                    <div class="section-menu__wrapper-search">
+                        <input class="section-menu__input-search" placeholder="Search products..." type="text"/>
+                        <div class="section-menu__icon-search">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+
                 </div>
-            </section>
-
-        </header>
-
-        <section class="section-baner-crumbs">
-            <div class="container">
-                <section class="section-baner">
-                    <h3 class="section-baner__baner-title">bedroom <span>furniture</span></h3>
-                    <p class="section-baner__offer">ALWAYS <span>25%</span> OFF OR MORE</p>
-                </section>
-                <section class="section-bread-crumbs">
-                    <div class="bread-crumbs">
-                        <div class="bread-crumbs__item">Home</div>
-                        <div class="bread-crumbs__item">Furniture</div>
-                    </div>
-                </section>
-            </div>
-        </section>
-
-        <section class="section-product">
-            <div class="container">
-                <div class="wrapper-two-col">
-                    <div class="wrapper-two-col__col-left col-left">
-
-                        <div class="display-control">
-                            <h2 class="display-control__title title">furniture</h2>
-                            <div class="display-control__filter">
-                                <div class="display-control__sort-by">
-                                    <p class="display-control__label">Sort By</p>
-                                    <div class="wrapper-select"><!--контейнер самого селекта-->
-                                        <div class="wrapper-select__wrapper-input">
-                                            <input class="wrapper-select__input" readonly value="Price: Lowest first" type="text"/>
-                                            <div class="wrapper-select__triangle-down"></div>
-                                        </div>
-                                        <ul class="wrapper-select__option"><!--раскрывающийся список-->
-                                            <li>Package-1</li>
-                                            <li>Package-2</li>
-                                            <li>Package-3</li>
-                                            <li>Package-4</li>
-                                            <li>Package-5</li>
-                                            <li>Package-6</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="display-control__show">
-                                    <p class="display-control__label">Show</p>
-                                    <div class="wrapper-select"><!--контейнер самого селекта-->
-                                        <div class="wrapper-select__wrapper-input">
-                                            <input class=" wrapper-select__input display-control__show-input" readonly value="12" type="text"/>
-                                            <div class="wrapper-select__triangle-down"></div>
-                                        </div>
-                                        <ul class="wrapper-select__option"><!--раскрывающийся список-->
-                                            <li>10</li>
-                                            <li>11</li>
-                                            <li>12</li>
-                                            <li>13</li>
-                                            <li>14</li>
-                                            <li>15</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="display-control__view-display">
-                                    <a href="" class="display-control__view display-control__view-active">
-                                        <i class="fa fa-th-list" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="product-card.html" class="display-control__view display-control__view-table">
-                                        <i class="fa fa-th-large" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-left__product-view-table">
-
-                            <div class="product_view-table">
-                                <div class="product_view-table__img">
-                                    <img src="img/good-1.jpg" alt=""/>
-                                </div>
-                                <div class="product_view-table__content">
-                                    <div class="product_view-table__body">
-                                        <h3 class="product_view-table__title">Aenean Ru Bristique</h3>
-                                        <p class="product_view-table__price">$350.00</p>
-
-                                        <div class="quality-rating product_view-table__rating">
-                                            <div class="quality-rating__item quality-rating__item_active"></div>
-                                            <div class="quality-rating__item"></div>
-                                            <div class="quality-rating__item"></div>
-                                            <div class="quality-rating__item"></div>
-                                            <div class="quality-rating__item"></div>
-                                        </div>
-                                        <p class="product_view-table__description">
-                                            Faded short sleeves t-shirt with high neckline. Soft and stretchy material
-                                            for a
-                                            comfortable fit. Accessorize with a straw hat and you're ready.
-                                        </p>
-                                    </div>
-                                    <div class="product_view-table__footer">
-                                        <div class="wrapper-timer__icons-for-visitors icons-for-visitors">
-                                            <div class="icons-for-visitors__icon icons-for-visitors__icon_eye"></div>
-                                            <div class="icons-for-visitors__icon icons-for-visitors__icon_exchange"></div>
-                                            <a class="button button-add-to-cart button_black">
-                                                <p>add to cart</p>
-                                            </a>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="wrapper-two-col__col-right">
-
-                    <div class="filter-category">
-                        <h3 class="subtitle col-left__subtitle">Filter By categories</h3>
-
-                        <div class="filter-category__item">
-                            <p class="filter-category__category">Sofa</p>
-
-                            <div class="filter-category__count"><span>3</span></div>
-                        </div>
-                        <div class="filter-category__item">
-                            <p class="filter-category__category">Sofa</p>
-
-                            <div class="filter-category__count"><span>3</span></div>
-                        </div>
-                        <div class="filter-category__item">
-                            <p class="filter-category__category">Sofa</p>
-
-                            <div class="filter-category__count"><span>3</span></div>
-                        </div>
-                        <div class="filter-category__item">
-                            <p class="filter-category__category">Sofa</p>
-
-                            <div class="filter-category__count"><span>3</span></div>
-                        </div>
-                        <div class="filter-category__item">
-                            <p class="filter-category__category">Sofa</p>
-
-                            <div class="filter-category__count"><span>3</span></div>
-                        </div>
-
-                    </div>
-                    <div class="filter-price">
-                        <h3 class="subtitle col-left__subtitle">Filter By Price</h3>
-
-                        <div class="filter-price__slider-range ">
-                            <div class="slider-range" id="slider-range"></div>
-                            <div class="filter-price__price-display">
-                                <a class="button filter-price__button">
-                                    <p>Filter</p>
-                                </a>
-
-
-                                <div class="filter-price__display">
-                                    <input class="form-control" name="price" id="price">
-
-                                    <p> - </p>
-                                    <input class="form-control" name="price" id="price-2">
-
-                                </div>
-
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="filter-color">
-                        <h3 class="subtitle col-left__subtitle">Filter By color</h3>
-
-                        <div class="filter-color__item">
-                            <div class="filter-color__color filter-color__color_red"></div>
-                            <div class="filter-color__value">Red</div>
-                        </div>
-
-                        <div class="filter-color__item">
-                            <div class="filter-color__color filter-color__color_black"></div>
-                            <div class="filter-color__value">Black</div>
-                        </div>
-
-                        <div class="filter-color__item">
-                            <div class="filter-color__color filter-color__color_yellow"></div>
-                            <div class="filter-color__value">Yellow</div>
-                        </div>
-
-                        <div class="filter-color__item">
-                            <div class="filter-color__color filter-color__color_red"></div>
-                            <div class="filter-color__value">Red</div>
-                        </div>
-
-                        <div class="filter-color__item">
-                            <div class="filter-color__color filter-color__color_black"></div>
-                            <div class="filter-color__value">Black</div>
-                        </div>
-
-                        <div class="filter-color__item">
-                            <div class="filter-color__color filter-color__color_yellow"></div>
-                            <div class="filter-color__value">Yellow</div>
-                        </div>
-                    </div>
-
-                    <div class="filter-size">
-                        <h3 class="subtitle col-left__subtitle">Filter By size</h3>
-
-                        <div class="filter-size__item ">
-                            <p class="filter-size__category">S</p>
-
-                            <div class="filter-size__count"><span>3</span></div>
-                        </div>
-
-                        <div class="filter-size__item ">
-                            <p class="filter-size__category">M</p>
-
-                            <div class="filter-size__count"><span>3</span></div>
-                        </div>
-
-                        <div class="filter-size__item ">
-                            <p class="filter-size__category">L</p>
-
-                            <div class="filter-size__count"><span>3</span></div>
-                        </div>
-
-                        <div class="filter-size__item ">
-                            <p class="filter-size__category">XL</p>
-
-                            <div class="filter-size__count"><span>3</span></div>
-                        </div>
-
-                        <div class="filter-size__item ">
-                            <p class="filter-size__category">XX</p>
-
-                            <div class="filter-size__count"><span>3</span></div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="filter">
-                        <h3 class="subtitle col-left__subtitle">Filter By size</h3>
-
-                        <div class="filter__wrapper">
-                            <div class="filter__item">
-                                <p>Table</p>
-                            </div>
-                            <div class="filter__item">
-                                <p>Chair</p>
-                            </div>
-                            <div class="filter__item">
-                                <p>Hand Bag</p>
-                            </div>
-                            <div class="filter__item">
-                                <p>Women</p>
-                            </div>
-                            <div class="filter__item">
-                                <p>Fashion</p>
-                            </div>
-                            <div class="filter__item">
-                                <p>Clothes</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="featured-product">
-                        <div class="featured-product__item">
-                            <div class="featured-product__img">
-                                <img src="img/good-1.jpg" alt=""/>
-                            </div>
-                            <div class="featured-product__content">
-                                <p class="featured-product__name-product">Office Chair</p>
-
-                                <p class="featured-product__price-product">$350.00</p>
-
-                                <div class="featured-product__rating quality-rating">
-                                    <div class="quality-rating__item quality-rating__item_active"></div>
-                                    <div class="quality-rating__item"></div>
-                                    <div class="quality-rating__item"></div>
-                                    <div class="quality-rating__item"></div>
-                                    <div class="quality-rating__item"></div>
-                                </div>
-                                <a class="button button_black featured-product__button">
-                                    <p>add to cart</p>
-                                </a>
-
-
-                            </div>
-
-                        </div>
-                        <div class="featured-product__item">
-                            <div class="featured-product__img">
-                                <img src="img/good-1.jpg" alt=""/>
-                            </div>
-                            <div class="featured-product__content">
-                                <p class="featured-product__name-product">Office Chair</p>
-
-                                <p class="featured-product__price-product">$350.00</p>
-
-                                <div class="featured-product__rating quality-rating">
-                                    <div class="quality-rating__item quality-rating__item_active"></div>
-                                    <div class="quality-rating__item"></div>
-                                    <div class="quality-rating__item"></div>
-                                    <div class="quality-rating__item"></div>
-                                    <div class="quality-rating__item"></div>
-                                </div>
-                                <a class="button button_black featured-product__button">
-                                    <p>add to cart</p>
-                                </a>
-
-
-                            </div>
-
-                        </div>
-                        <div class="featured-product__item">
-                            <div class="featured-product__img">
-                                <img src="img/good-1.jpg" alt=""/>
-                            </div>
-                            <div class="featured-product__content">
-                                <p class="featured-product__name-product">Office Chair</p>
-
-                                <p class="featured-product__price-product">$350.00</p>
-
-                                <div class="featured-product__rating quality-rating">
-                                    <div class="quality-rating__item quality-rating__item_active"></div>
-                                    <div class="quality-rating__item"></div>
-                                    <div class="quality-rating__item"></div>
-                                    <div class="quality-rating__item"></div>
-                                    <div class="quality-rating__item"></div>
-                                </div>
-                                <a class=" button button_black featured-product__button">
-                                    <p>add to cart</p>
-                                </a>
-
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    </div>
-                    </div>
-
-                <div class="slider-vendors">
-                    <div class="slider-vendors__arrow slider-vendors__arrow_left"></div>
-                    <div class="slider-vendors__wrapper-vendor vendor-row-center">
-                        <div class="vendor-row-center__item-col-wrapper">
-                            <img src="img/vendor-1.png" alt="">
-                        </div>
-                        <div class="vendor-row-center__item-col-wrapper">
-                            <img src="img/vendor-1.png" alt="">
-                        </div>
-                        <div class="vendor-row-center__item-col-wrapper">
-                            <img src="img/vendor-1.png" alt="">
-                        </div>
-                        <div class="vendor-row-center__item-col-wrapper">
-                            <img src="img/vendor-1.png" alt="">
-                        </div>
-                        <div class="vendor-row-center__item-col-wrapper">
-                            <img src="img/vendor-1.png" alt="">
-                        </div>
-                        <div class="vendor-row-center__item-col-wrapper">
-                            <img src="img/vendor-1.png" alt="">
-                        </div>
-
-                    </div>
-                    <div class="slider-vendors__arrow slider-vendors__arrow_right"></div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="section-news-letter">
-            <div class="container">
-                <div class="wrapper-news-letter">
-                    <p class="wrapper-news-letter__title">NEWSLETTER:</p>
-                    <div class="wrapper-news-letter__entry-field entry-field">
-                        <div class="entry-field__icon"></div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-
-
-        <section class="footer">
-            <div class="footer-section-1">
-                <div class="container">
-                    <div class="footer__menu">
-                        <div class="footer__menu-col">
-                            <div class="footer__menu-title">INFORMATION</div>
-                            <div class="footer__menu-item"><a href="#">About us</a></div>
-                            <div class="footer__menu-item"><a href="#">Privacy</a></div>
-                            <div class="footer__menu-item"><a href="#">Conditions</a></div>
-                            <div class="footer__menu-item"><a href="#">Online support</a></div>
-                        </div>
-
-                        <div class="footer__menu-col">
-                            <div class="footer__menu-title">MY ACCOUNT</div>
-                            <div class="footer__menu-item"><a href="#">About us</a></div>
-                            <div class="footer__menu-item"><a href="#">Privacy</a></div>
-                            <div class="footer__menu-item"><a href="#">Conditions</a></div>
-                            <div class="footer__menu-item"><a href="#">Online support</a></div>
-                        </div>
-
-                        <div class="footer__menu-col">
-                            <div class="footer__menu-title">INFORMATION</div>
-                            <div class="footer__menu-item"><a href="#">About us</a></div>
-                            <div class="footer__menu-item"><a href="#">Privacy</a></div>
-                            <div class="footer__menu-item"><a href="#">Conditions</a></div>
-                            <div class="footer__menu-item"><a href="#">Online support</a></div>
-                        </div>
-
-                        <div class="footer__menu-col">
-                            <div class="footer__menu-title">ORDERS</div>
-                            <div class="footer__menu-item"><a href="#">About us</a></div>
-                            <div class="footer__menu-item"><a href="#">Privacy</a></div>
-                            <div class="footer__menu-item"><a href="#">Conditions</a></div>
-                            <div class="footer__menu-item"><a href="#">Online support</a></div>
-
-                            <div class="footer__payment-method payment-method">
-                                <div class="payment-method__item"></div>
-                                <div class="payment-method__item"></div>
-                                <div class="payment-method__item"></div>
-                                <div class="payment-method__item"></div>
-                                <div class="payment-method__item"></div>
-                            </div>
-                        </div>
-
-                    </div>
+                <div class="section-menu__col-menu">
+                    <ul class="section-menu__menu">
+                        <li class="section-menu__item section-menu__item_active"><a href="#">home</a></li>
+                        <li class="section-menu__item"><a href="#">furniture</a></li>
+                        <li class="section-menu__item"><a href="#">chair</a></li>
+                        <li class="section-menu__item"><a href="#">table</a></li>
+                        <li class="section-menu__item"><a href="#">sofa</a></li>
+                        <li class="section-menu__item"><a href="#">bedroom</a></li>
+                        <li class="section-menu__item"><a href="#">blog</a></li>
+                    </ul>
 
                 </div>
             </div>
 
-            <div class="footer-section-2">
-                <div class="container">
-                    <div class="footer-section-2__copyright">
-                        <div class="footer-section-2__col-left"></div>
-                        <p class="footer-section-2__title">Copyright 2016 Bazar | All Rights Reserved</p>
-                        <div class="wrapper-social-icon">
-                            <div class="wrapper-social-icon__item "></div>
-                            <div class="wrapper-social-icon__item "></div>
-                            <div class="wrapper-social-icon__item "></div>
-                            <div class="wrapper-social-icon__item "></div>
-                            <div class="wrapper-social-icon__item "></div>
-                            <div class="wrapper-social-icon__item "></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-    </div><!--wrap-->
-
-
-
-
-    <section class="">
-        <div class="container">
 
         </div>
     </section>
 
+    <section class="furniture">
+        <div class="container-2">
+            <div class="furniture__wrapper">
+                <h1 class="furniture__title">Furniture</h1>
+                <div class="furniture__bread-crumbs">
+                    <p class="furniture__crumb-item">Home</p>
+                    <p class="furniture__crumb-item">Furniture</p>
+                    <p class="furniture__crumb-item">Chair</p>
+                </div>
 
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-
-    <script>
-        $(document).ready(function() {
-
-            $('.wrapper-select__triangle-down, .wrapper-select').on('click',function(){
-
-
-                $(this).find('.wrapper-select__option').slideToggle();
-            });
-
-            $('.wrapper-select__option li').on('click',function(){
-                var val = $(this).text();
-                $(this).parents('.wrapper-select').find('.wrapper-select__input').val(val);
-                $(this).find('.wrapper-select__option').slideUp();
-
-            });
+            </div>
+        </div>
+    </section>
 
 
+    <section class="detailed-card">
+        <div class="container-2">
+
+            <div class="detailed-card__container">
+
+                <div class="detailed-card__slider wrapper-sliders">
+                    <div class="bxslider">
+                        <div class="detailed-card__slide wrapper-slide">
+                        <div class="detailed-card__col-left">
+                            <div class="detailed-card__main-img">
+                                <img src="img/good-1.jpg" alt=""/>
+                            </div>
 
 
-        $( "#slider-range" ).slider({
-            range: true,
-            min: 135,
-            max: 1000,
-            values: [ 100, 500 ],
-            slide: function( event, ui ) {
-                $( "#price" ).val( "$" + ui.values[ 0 ]);
-                $( "#price-2" ).val( "$" + ui.values[ 1 ] );
+                            <div class="detailed-card__pagers wrapper-sliders">
+                                <div class="bxslider">
+                                    <div class="detailed-card__pager wrapper-slide">
+                                        <img src="img/good-1.jpg" alt=""/>
+                                    </div>
+                                    <div class="detailed-card__pager wrapper-slide">
+                                        <img src="img/good-1.jpg" alt=""/>
+                                    </div>
+                                    <div class="detailed-card__pager wrapper-slide">
+                                        <img src="img/good-1.jpg" alt=""/>
+                                    </div>
+                                    <div class="detailed-card__pager wrapper-slide">
+                                        <img src="img/good-1.jpg" alt=""/>
+                                    </div>
 
-            }
-        });
-            $("#price").val("$" + $("#slider-range").slider("values", 0));
-
-            $("#price-2").val("$" + $("#slider-range").slider("values", 1));
-
-            $('.filter-price__button').on('click',function(){
-                $('.product-card').show();
-                var price = $('#price').val();
-                price = parseFloat(price.slice(1));
-
-                var price_2 = $('#price-2').val();
-                price_2 = parseFloat(price_2.slice(1));
-
-                var total_price = price_2 - price;
-                console.log(total_price);
-
-                $('.col-left__product-row-center .product-card').each(function(){
-                    var prices = $(this).find('.wrapper-cost-goods__real-price').text();
-                    prices = parseFloat(prices.slice(1));
-                    if(prices>price_2||prices<price){
-                        $(this).hide();
-                    }
-                });
-
-            });
-
-
-            $('.filter-color__item').on('click',function(){
-                $(this).addClass('filter-color__item_active');
-                $(this).siblings('.filter-color__item').removeClass('filter-color__item_active');
-            });
-
-            $('.filter-category__item').on('click', function () {
-                $(this).addClass('filter-category__item_active');
-                $(this).siblings('.filter-category__item').removeClass('filter-category__item_active');
-            });
-
-            $('.filter-size__item').on('click', function () {
-                $(this).addClass('filter-size__item_active');
-                $(this).siblings('.filter-size__item').removeClass('filter-size__item_active');
-            });
-
-            $('.filter__item').on('click', function () {
-                $(this).addClass('filter__item_active');
-                $(this).siblings('.filter__item').removeClass('filter__item_active');
-            });
+                                    <div class="detailed-card__pager wrapper-slide">
+                                        <img src="img/good-1.jpg" alt=""/>
+                                    </div>
+                                    <div class="detailed-card__pager wrapper-slide">
+                                        <img src="img/good-1.jpg" alt=""/>
+                                    </div>
+                                    <div class="detailed-card__pager wrapper-slide">
+                                        <img src="img/good-1.jpg" alt=""/>
+                                    </div>
+                                    <div class="detailed-card__pager wrapper-slide">
+                                        <img src="img/good-1.jpg" alt=""/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="detailed-card__slide wrapper-slide">
+                            <div class="detailed-card__col-left">
+                                <div class="detailed-card__main-img">
+                                    <img src="img/good-2.jpg" alt=""/>
+                                </div>
 
 
+                                <div class="detailed-card__pagers wrapper-sliders">
+                                    <div class="bxslider">
+                                        <div class="detailed-card__pager wrapper-slide">
+                                            <img src="img/good-1.jpg" alt=""/>
+                                        </div>
+                                        <div class="detailed-card__pager wrapper-slide">
+                                            <img src="img/good-1.jpg" alt=""/>
+                                        </div>
+                                        <div class="detailed-card__pager wrapper-slide">
+                                            <img src="img/good-1.jpg" alt=""/>
+                                        </div>
+                                        <div class="detailed-card__pager wrapper-slide">
+                                            <img src="img/good-1.jpg" alt=""/>
+                                        </div>
+
+                                        <div class="detailed-card__pager wrapper-slide">
+                                            <img src="img/good-1.jpg" alt=""/>
+                                        </div>
+                                        <div class="detailed-card__pager wrapper-slide">
+                                            <img src="img/good-1.jpg" alt=""/>
+                                        </div>
+                                        <div class="detailed-card__pager wrapper-slide">
+                                            <img src="img/good-1.jpg" alt=""/>
+                                        </div>
+                                        <div class="detailed-card__pager wrapper-slide">
+                                            <img src="img/good-1.jpg" alt=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
+        <section>
+            <div style="height: 1000px;border-right: 1px solid;border-left: 1px solid;" class="container-2">
 
+            </div>
+        </section>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>
+<!--<script src="js/jquery.bxslider.min.js"></script>-->
+<script>
+    $(document).ready(function () {
 
+        var maxwidth = 0;
 
-            var elem_sale = '<div class="product-card__sale"><p>sale</p></div>';
-            $(".product-card").each(function () {
-                if ($(this).hasClass('product-card_sale')) {
-                    $(this).prepend(elem_sale)
+        function auto_width() {
+            $('.header__section-bottom-col').each(function () { //циклом прохожу все блоки, кроме среднего
+
+                if ($(this).width() > maxwidth) {//записываю в переменную после каждого обхода большую величину
+                    maxwidth = $(this).width();
                 }
             });
-            $('.wrapper-category-search__select').on('click', function () {
 
-                $('.wrapper-category-search__list-option').slideToggle();
+            $('.header__section-bottom-col').css('minWidth', maxwidth);//даю крайним блокам одинаковую ширину
+
+        }
+
+        auto_width();
+
+        $('.wrapper-select__triangle-down, .wrapper-select').on('click',function(){
+
+
+            $(this).find('.wrapper-select__option').slideToggle();
+        });
+
+        $('.wrapper-select__option li').on('click',function(){
+            var val = $(this).text();
+            $(this).parents('.wrapper-select').find('.wrapper-select__input').val(val);
+            $(this).find('.wrapper-select__option').slideUp();
+
+        });
+
+//        Слайдер
+//        function slider(){
+            slide = $('.detailed-card__pagers .bxslider').bxSlider({
+                mode:"horizontal",
+                slideMargin:10,
+                controls: true,
+                pager:false,
+//            onSliderLoad: function(){//чтобы стрелочки были по середине
+//                var width = $(".wrapper-slider .bx-pager").width();
+//                $(".wrapper-slider .bx-pager").css('marginLeft',-width/2);
+//                $('.wrapper-slider .wrapper-slide').css('display','block');
+//            },
+                minSlides:1,
+                maxSlides:4,
+                slideWidth:89,
+                nextText:"",
+                prevText:"",
+
+
+
+
+                oneToOneTouch: false
+
             });
+//        }
 
-            $('.wrapper-category-search__list-option li').on('click', function () {
-                var val = $(this).text();
-                $('.wrapper-category-search__input').val(val);
-                $('.wrapper-category-search__list-option').slideUp();
+        $('.detailed-card__slider .bxslider').bxSlider({
+            mode: "horizontal",
+            controls: true,
+            pager: false,
+            onSliderLoad: function () {
+                $('.bx-controls:nth-child(2)').find('.bx-controls-direction').addClass('ret');
+                slide.reloadSlider();
+            },
+            onSlideAfter: function () {
 
-            });
+            },
 
-            $('.furniture-tabs a').click(function(event){
-                event.preventDefault(event);
-            });
-            $('.furniture-tabs .furniture-tabs__item').on('click',function(){
-
-                var dat = $(this).attr('data-type');
-                $('.wrapper-product-line[data-type='+dat+']').addClass('row-center_active');
-                $('.furniture-tabs__item[data-type='+dat+']').addClass('furniture-tabs__item_active');
-                $('.wrapper-product-line[data-type='+dat+']').siblings('.wrapper-product-line').removeClass('row-center_active');
-                $('.furniture-tabs__item[data-type='+dat+']').siblings('.furniture-tabs__item').removeClass('furniture-tabs__item_active');
-            });
+            nextText: "",
+            prevText: ""
+        });
 
 
+        $('.detailed-card__pager').on('click',function(){
 
-        })
-    </script>
+
+//           var src = $(this).find('img');
+//            slider();
+        });
+
+
+    });
+</script>
 </body>
 </html>
