@@ -2626,6 +2626,9 @@ label {
 .detailed-card {
   background-color: #fff;
 }
+.detailed-card__col-left {
+  max-width: 436px;
+}
 .detailed-card__slider {
   width: 100%;
   padding: 22px;
@@ -2646,11 +2649,8 @@ label {
 }
 .detailed-card__pagers {
   margin-top: 13px;
-  display: flex;
-  justify-content: center;
 }
 .detailed-card__pager {
-  width: 89px;
   height: 104px;
 }
 .detailed-card__pager img {
@@ -2662,6 +2662,48 @@ label {
 }
 /*Пейджеры и стрелки*/
 /*Стрелки*/
+.detailed-card__pagers .bx-arrow {
+  border: 1px solid #2a2a2a;
+  width: 30px;
+  height: 30px;
+  z-index: 401;
+  align-items: center;
+  justify-content: center;
+}
+.detailed-card__pagers .bx-arrow:hover {
+  background-color: #d58e32;
+  border: none;
+}
+.detailed-card__pagers .bx-arrow:hover:before {
+  color: #fff;
+}
+.detailed-card__pagers .bx-prev {
+  left: 1px;
+  top: 50%;
+  margin-top: -15px;
+}
+.detailed-card__pagers .bx-next {
+  right: 3px;
+  top: 50%;
+  margin-top: -15px;
+}
+.detailed-card__pagers .bx-arrow:before {
+  color: #000;
+  font-family: FontAwesoome, sans-serif;
+  font-size: 22px;
+}
+.detailed-card__pagers .bx-prev:before {
+  content: "\f104";
+}
+.detailed-card__pagers .bx-next:before {
+  content: "\f105";
+}
+.wrapper-sliders .bx-arrow {
+  display: flex;
+  position: absolute;
+  text-align: center;
+  z-index: 100;
+}
 .detailed-card__slider .ret .bx-arrow {
   border: 1px solid #2a2a2a;
   width: 30px;
