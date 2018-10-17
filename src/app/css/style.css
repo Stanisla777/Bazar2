@@ -2626,6 +2626,9 @@ label {
 .detailed-card {
   background-color: #fff;
 }
+.detailed-card__col-left {
+  max-width: 436px;
+}
 .detailed-card__slider {
   width: 100%;
   padding: 22px;
@@ -2646,11 +2649,8 @@ label {
 }
 .detailed-card__pagers {
   margin-top: 13px;
-  display: flex;
-  justify-content: center;
 }
 .detailed-card__pager {
-  width: 89px;
   height: 104px;
 }
 .detailed-card__pager img {
