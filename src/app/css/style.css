@@ -2627,7 +2627,7 @@ label {
   background-color: #fff;
 }
 .detailed-card__col-left {
-  max-width: 436px;
+  width: 50%;
 }
 .detailed-card__slider {
   width: 100%;
@@ -2640,8 +2640,10 @@ label {
   display: flex;
 }
 .detailed-card__main-img {
-  width: 436px;
-  height: 493px;
+  width: 28vw;
+  max-width: 436px;
+  height: 31vw;
+  max-height: 493px;
 }
 .detailed-card__main-img img {
   width: 100%;
@@ -2649,8 +2651,11 @@ label {
 }
 .detailed-card__pagers {
   margin-top: 13px;
+  width: 100%;
+  max-width: 436px;
 }
 .detailed-card__pager {
+  max-width: 90px;
   height: 104px;
 }
 .detailed-card__pager img {

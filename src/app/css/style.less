@@ -3037,6 +3037,13 @@ label {
 
 .detailed-card{
   background-color: #fff;
+  &__col-left{
+    width: 50%;
+  }
+
+
+
+
   &__slider{
     width: 100%;
     padding: 22px;
@@ -3048,8 +3055,11 @@ label {
     display: flex;
   }
   &__main-img{
-    width: 436px;
-    height: 493px;
+    width: 28vw;
+    max-width: 436px;
+    height: 31vw;
+    max-height: 493px;
+
     img{
       width: 100%;
       height: 100%;
@@ -3057,11 +3067,14 @@ label {
   }
   &__pagers{
     margin-top: 13px;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    max-width: 436px;
+//    display: flex;
+//    justify-content: center;
   }
   &__pager{
-    width: 89px;
+//    width: 89px;
+    max-width: 90px;
     height: 104px;
     img{
       height: 100%;

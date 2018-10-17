@@ -379,26 +379,6 @@
         });
 
 //        Слайдер
-        function slider(){
-             slide = $('.detailed-card__pagers .bxslider-2').bxSlider({
-                mode:"horizontal",
-                slideMargin:10,
-                controls: true,
-                pager:false,
-                minSlides:1,
-                maxSlides:4,
-                slideWidth:89,
-                nextText:"",
-                prevText:"",
-                oneToOneTouch: false
-
-            });
-        }
-
-
-
-
-
 
         $('.owl-carousel').owlCarousel({
 
@@ -407,6 +387,7 @@
             items:1,
             onInitialized: function(){
                 owl_slider();
+
             }
 //            responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
 //                0:{
@@ -422,39 +403,13 @@
         });
 
 
-//        $('.owl-carousel-2').owlCarousel({
-//            nav:true, //Отключение навигации
-////                autoplay:true, //Автозапуск слайдера
-////                smartSpeed:1000, //Время движения слайда
-////                autoplayTimeout:2000, //Время смены слайда
-//            items:4
-////            responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
-////                0:{
-////                    items:3
-////                },
-////                600:{
-////                    items:3
-////                },
-////                1000:{
-////                    items:3
-////                }
-////            }
-//        });
-
-
-
-
-
 
         function owl_slider(){
             $('.owl-carousel-2').owlCarousel({
 //                loop:true, //Зацикливаем слайдер
                 margin:10, //Отступ от элемента справа в 50px
                 nav:true, //Отключение навигации
-//                autoplay:true, //Автозапуск слайдера
-//                smartSpeed:1000, //Время движения слайда
-//                autoplayTimeout:2000, //Время смены слайда
-                items:5
+                items:4,
 //                responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
 //                    0:{
 //                        items:3
@@ -466,30 +421,13 @@
 //                        items:3
 //                    }
 //                }
+
+                onInitialized: function(){
+                    $('.detailed-card__pagers .owl-item.active:last-child').hide();
+
+                }
             });
         }
-
-
-
-
-
-        $('.detailed-card__slider .bxslider').bxSlider({
-            mode: "horizontal",
-            controls: true,
-            pager: false,
-            onSliderLoad: function () {
-                $('.bx-controls:nth-child(1)').find('.bx-controls-direction').addClass('ret');
-                owl_slider();
-//                slide.redrawSlider();
-            },
-            onSlideAfter: function () {
-
-//                slide.destroySlider();
-            },
-
-            nextText: "",
-            prevText: ""
-        });
 
 
 
