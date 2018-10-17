@@ -3038,11 +3038,16 @@ label {
 .detailed-card{
   background-color: #fff;
   &__col-left{
-    width: 50%;
+    width: 39%;
+    max-width: 436px;
   }
 
 
-
+  .responsive-box::before {
+    content: "";
+    display: block;
+    padding-top: 56.52%; /* С помощью этого padding мы задаем пропорцию высоты т ширины */
+  }
 
   &__slider{
     width: 100%;
@@ -3055,12 +3060,21 @@ label {
     display: flex;
   }
   &__main-img{
-    width: 28vw;
-    max-width: 436px;
-    height: 31vw;
+    &:before{
+      content: "";
+      display: block;
+      padding-top: 113.52%;
+    }
+    width: 100%;
+    position: relative;
     max-height: 493px;
 
     img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
       width: 100%;
       height: 100%;
     }
@@ -3102,96 +3116,46 @@ label {
 /*Пейджеры и стрелки*/
 
 /*Стрелки*/
-.detailed-card__pagers .bx-arrow{
-  border: 1px solid rgb(42, 42, 42);
+.owl-nav-sliders{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.owl-nav button{
   width: 30px;
   height: 30px;
-  z-index: 401;
-  align-items: center;
-  justify-content: center;
+  border: 1px solid #000;
 }
-.detailed-card__pagers .bx-arrow:hover{
-  background-color: rgb(213, 142, 50);
-  border: none;
-  &:before{
-    color: #fff;
-  }
+.owl-nav button:before{
+  font-family: "FontAwesome", sans-serif;
+
 }
-.detailed-card__pagers .bx-prev{
-    left: 1px;
-    top: 50%;
-    margin-top: -15px;
+.owl-prev:before{
+  content: "\f104";
 }
-.detailed-card__pagers .bx-next{
-  right: 3px;
+.owl-next:before{
+  content: "\f105";
+}
+
+.owl-nav-sliders .owl-prev{
+  margin-right: 10px;
+}
+
+.owl-nav-pagers{
+  position: absolute;
   top: 50%;
   margin-top: -15px;
-}
-.detailed-card__pagers .bx-arrow:before{
-  color: #000;
-  font-family: FontAwesoome,sans-serif;
-  font-size: 22px;
-}
-.detailed-card__pagers .bx-prev:before{
-  content: "\f104";
-}
-.detailed-card__pagers .bx-next:before{
-  content: "\f105";
-}
-.wrapper-sliders .bx-arrow{
-  display: flex;
-  position: absolute;
-  text-align: center;
-  z-index: 100;
-}
-
-
-
-
-////////////////////////////////////////////////////////
-
-.detailed-card__slider .ret .bx-arrow{
-  border: 1px solid rgb(42, 42, 42);
-  width: 30px;
-  height: 30px;
-  z-index: 401;
-  align-items: center;
-  justify-content: center;
-}
-.detailed-card__slider .ret .bx-arrow:hover{
-  background-color: rgb(213, 142, 50);
-  border: none;
-  &:before{
-    color: #fff;
+  width: 100%;
+  button{
+    position: absolute;
   }
 }
-.detailed-card__slider .ret .bx-prev{
-  right: 109px;
-  top: 24px;
+.owl-nav-pagers .owl-prev{
+  left: 0;
 }
-.detailed-card__slider .ret .bx-next{
-  right: 73px;
-  top: 24px;
+.owl-nav-pagers .owl-next{
+  right: 0;
 }
-.detailed-card__slider .ret .bx-arrow:before{
-  color: #000;
-  font-family: FontAwesoome,sans-serif;
-  font-size: 22px;
-}
-.detailed-card__slider .ret .bx-prev:before{
-  content: "\f104";
-}
-.detailed-card__slider .ret .bx-next:before{
-  content: "\f105";
-}
-.wrapper-sliders .bx-arrow{
-  cursor: pointer;
-  display: flex;
-  position: absolute;
-  text-align: center;
-  z-index: 100;
-}
-
 
 /* Пейджеры */
 /*Настраивается расположение пейджеров*/

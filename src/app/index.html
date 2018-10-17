@@ -238,7 +238,6 @@
                                     <img src="img/good-1.jpg" alt=""/>
                                 </div>
 
-
                                 <div class="detailed-card__pagers wrapper-sliders">
                                     <div class="owl-carousel-2">
                                         <div class="detailed-card__pager wrapper-slide">
@@ -383,9 +382,11 @@
         $('.owl-carousel').owlCarousel({
 
             nav:true, //Отключение навигации
-//
+            navText : ['',''],
+            dots:false,
             items:1,
             onInitialized: function(){
+                $('.owl-carousel').children('.owl-nav').addClass('owl-nav-sliders');
                 owl_slider();
 
             }
@@ -408,7 +409,9 @@
             $('.owl-carousel-2').owlCarousel({
 //                loop:true, //Зацикливаем слайдер
                 margin:10, //Отступ от элемента справа в 50px
+                dots:false,
                 nav:true, //Отключение навигации
+                navText : ['',''],
                 items:4,
 //                responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
 //                    0:{
@@ -423,7 +426,8 @@
 //                }
 
                 onInitialized: function(){
-                    $('.detailed-card__pagers .owl-item.active:last-child').hide();
+
+                    $('.owl-carousel-2').children('.owl-nav').addClass('owl-nav-pagers');
 
                 }
             });
