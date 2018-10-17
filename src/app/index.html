@@ -226,6 +226,29 @@
             </div>
         </section>
 </div>
+
+
+<p>ыыыыыыыыыыыыыыыыыыыыы</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/jquery.bxslider.js"></script>
 <!--<script src="js/jquery.bxslider.min.js"></script>-->
@@ -263,7 +286,7 @@
 
 //        Слайдер
         function slider(){
-             slide = $('.detailed-card__pagers .bxslider').bxSlider({
+             $('.detailed-card__pagers .bxslider').bxSlider({
                 mode:"horizontal",
                 slideMargin:10,
                 controls: true,
@@ -277,22 +300,22 @@
 
             });
         }
-
-        function reload(){
-            slide = $('.detailed-card__pagers .bxslider').bxSlider({
-                mode:"horizontal",
-                slideMargin:10,
-                controls: true,
-                pager:false,
-                minSlides:1,
-                maxSlides:4,
-                slideWidth:89,
-                nextText:"",
-                prevText:"",
-                oneToOneTouch: false
-
-            });
-        }
+ллллллллллллллллллллллллллллл
+//        function reload(){
+//            slide = $('.detailed-card__pagers .bxslider').bxSlider({
+//                mode:"horizontal",
+//                slideMargin:10,
+//                controls: true,
+//                pager:false,
+//                minSlides:1,
+//                maxSlides:4,
+//                slideWidth:89,
+//                nextText:"",
+//                prevText:"",
+//                oneToOneTouch: false
+//
+//            });
+//        }
 
 
         $('.detailed-card__slider .bxslider').bxSlider({
@@ -302,7 +325,7 @@
             onSliderLoad: function () {
                 $('.bx-controls:nth-child(2)').find('.bx-controls-direction').addClass('ret');
                 slider();
-//                slide.redrawSlider();
+
             },
             onSlideAfter: function () {
 
@@ -314,11 +337,6 @@
         });
 
 
-        $('.furniture__title').on('click',function(){
-            reload();
-
-
-        });
 
 
     });
