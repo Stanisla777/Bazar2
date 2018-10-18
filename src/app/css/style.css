@@ -2669,6 +2669,7 @@ label {
   margin-top: 13px;
   width: 100%;
   max-width: 436px;
+  padding-left: 7px;
 }
 .detailed-card__pager {
   max-width: 90px;
@@ -2676,6 +2677,26 @@ label {
 }
 .detailed-card__pager img {
   height: 100%;
+}
+.detailed-card__title {
+  font-size: 22px;
+  color: #2a2a2a;
+}
+.detailed-card__review-item {
+  margin: 0 2px;
+}
+.review {
+  display: flex;
+}
+.review__item:before {
+  content: "\f006";
+  font-family: "FontAwesome", sans-serif;
+  display: block;
+}
+.review__item_active:before {
+  content: "\f005";
+  font-family: "FontAwesome", sans-serif;
+  display: block;
 }
 .wrapper-sliders {
   position: relative;
@@ -2715,10 +2736,10 @@ label {
   position: absolute;
 }
 .owl-nav-pagers .owl-prev {
-  left: 0;
+  left: -7px;
 }
 .owl-nav-pagers .owl-next {
-  right: 0;
+  right: 14px;
 }
 /* Пейджеры */
 /*Настраивается расположение пейджеров*/

@@ -3083,6 +3083,7 @@ label {
     margin-top: 13px;
     width: 100%;
     max-width: 436px;
+    padding-left: 7px;
 //    display: flex;
 //    justify-content: center;
   }
@@ -3094,8 +3095,37 @@ label {
       height: 100%;
     }
   }
+  &__title{
+    font-size: 22px;
+    color: #2a2a2a;
+  }
+  &__review-item{
+    margin: 0 2px;
+  }
+
 
 }
+
+//рейтинг
+.quality-rating__item_active:before {
+
+}
+.review{
+
+  display: flex;
+  &__item:before{
+    content: "\f006";
+    font-family: "FontAwesome", sans-serif;
+    display: block;
+  }
+  &__item_active:before {
+    content: "\f005";
+    font-family: "FontAwesome", sans-serif;
+    display: block;
+  }
+}
+
+
 
 
 
@@ -3151,10 +3181,10 @@ label {
   }
 }
 .owl-nav-pagers .owl-prev{
-  left: 0;
+  left: -7px;
 }
 .owl-nav-pagers .owl-next{
-  right: 0;
+  right: 14px;
 }
 
 /* Пейджеры */

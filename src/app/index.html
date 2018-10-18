@@ -307,6 +307,18 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="detailed-card__col-right">
+                                <div class="detailed-card__title">Sunbaby Magic Bear Chair</div>
+
+                                    <div class="review detailed-card__review">
+                                        <div data-rev="0" class="review__item review__item_active detailed-card__review-item"></div>
+                                        <div data-rev="1" class="review__item detailed-card__review-item"></div>
+                                        <div data-rev="2" class="review__item detailed-card__review-item"></div>
+                                        <div data-rev="3" class="review__item detailed-card__review-item"></div>
+                                        <div data-rev="4" class="review__item detailed-card__review-item"></div>
+                                    </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -433,6 +445,27 @@
             });
         }
 
+//        рейтинг
+
+
+        var massive = [];
+        var review_item = $('.review__item');
+        review_item.each(function(el,index){
+            massive.push(el)
+        });
+
+
+        review_item.on('click',function(){
+           $(this).addClass('review__item_active');
+            var index = $(this).index();
+            review_item.each(function(el,ind){
+               if(el>index){
+                   $(this).removeClass('review__item_active')
+               }
+            })
+
+
+        });
 
 
 
