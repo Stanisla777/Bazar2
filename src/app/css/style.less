@@ -3140,11 +3140,11 @@ label {
 
 }
 .review{
-  &__item:hover:before{
-    content: "\f005";
-    font-family: "FontAwesome", sans-serif;
-    display: block;
-  }
+//  &__item:hover:before{
+//    content: "\f005";
+//    font-family: "FontAwesome", sans-serif;
+//    display: block;
+//  }
   display: flex;
   &__item:before{
     content: "\f006";
@@ -3152,6 +3152,11 @@ label {
     display: block;
   }
   &__item_active:before {
+    content: "\f005";
+    font-family: "FontAwesome", sans-serif;
+    display: block;
+  }
+  &__item_hover:before {
     content: "\f005";
     font-family: "FontAwesome", sans-serif;
     display: block;

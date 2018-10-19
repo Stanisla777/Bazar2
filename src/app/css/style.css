@@ -2714,17 +2714,17 @@ label {
 .review {
   display: flex;
 }
-.review__item:hover:before {
-  content: "\f005";
-  font-family: "FontAwesome", sans-serif;
-  display: block;
-}
 .review__item:before {
   content: "\f006";
   font-family: "FontAwesome", sans-serif;
   display: block;
 }
 .review__item_active:before {
+  content: "\f005";
+  font-family: "FontAwesome", sans-serif;
+  display: block;
+}
+.review__item_hover:before {
   content: "\f005";
   font-family: "FontAwesome", sans-serif;
   display: block;
