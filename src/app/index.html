@@ -472,30 +472,23 @@
                    $(this).addClass('review__item_active');
                }
             });
+            $(this).parents('.review').addClass('review-active');
             $('.detailed-card__count-review span').text(index + 1);
 
         });
 
 
+//        review_item.mousemove(function(e){
+//            // положение элемента
+//            var pos = $(this).offset();
+//            var elem_left = pos.left;
+//            var elem_top = pos.top;
+//            // положение курсора внутри элемента
+//            var Xinner = e.pageX - elem_left;
+//            var Yinner = e.pageY - elem_top;
+//            console.log("X: " + Xinner + " Y: " + Yinner); // вывод результата в консоль
+//        });
 
-
-        function getPosition(e){
-            var x = y = 0;
-
-            if(!e){
-                var e = window.event;
-            }
-
-            if(e.pageX || e.pageY){
-                x = e.pageX;
-                y = e.pageY;
-            }else if(e.clientX || e.clientY){
-                x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-                y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
-            }
-
-            return {x: x, y: y}
-        }
 
 
 
@@ -506,34 +499,51 @@
 
             function () {
                 var index = $(this).index();
-
-//                console.log(index);
                 review_item.each(function(el,ind){
                     if(el<=index){
                         $(this).addClass('review__item_hover');
                     }
-//
                 });
+                if($(this).parents('.review').hasClass('review-active')==false){
+                    $('.detailed-card__count-review span').text(index + 1);
+                }
 
             },
             function (e) {
+
+
+                var pos = $(this).offset();
+                var elem_left = pos.left;
+                var elem_top = pos.top;
+                // положение курсора внутри элемента
+                var Xinner = e.pageX - elem_left;
+                var Yinner = e.pageY - elem_top;
+
                 var index = $(this).index();
-
-                var coord = getPosition(e);
-//                console.log(coord.x);
-
                 review_item.each(function(el,ind){
 
-                    if(el>=index){
+                    if(el>=index&&Xinner<0){
                         $(this).removeClass('review__item_hover');
                     }
 
                 });
+
         });
 
         $('.detailed-card__review').mouseleave(function(){
             review_item.removeClass('review__item_hover');
+            if($('.detailed-card__review').hasClass('review-active')==false){
+                $('.detailed-card__count-review span').text('0');
+            }
+
         })
+        $('.detailed-card__review').mouseenter(function(){
+            review_item.removeClass('review__item_active');
+        });
+
+
+
+
 
 
 
