@@ -12,6 +12,14 @@
     <link href="css/FontAwesoome/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/owl.carousel.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+
+
+    <style>
+        .twocolumn li {display:block;width:49%;float:left;}
+    </style>
+   
+
+
 </head>
 <body>
 <div class="wrap">
@@ -355,7 +363,14 @@
 
         <section>
             <div style="height: 1000px;border-right: 1px solid;border-left: 1px solid;" class="container-2">
-
+                <ul class="twocolumn">
+                    <li>Пункт списка</li>
+                    <li>Пункт списка</li>
+                    <li>Пункт списка</li>
+                    <li>Пункт списка</li>
+                    <li>Пункт списка</li>
+                    <li>Пункт списка</li>
+                </ul>
             </div>
         </section>
 </div>
@@ -508,6 +523,7 @@
                     $('.detailed-card__count-review span').text(index + 1);
                 }
 
+
             },
             function (e) {
 
@@ -523,7 +539,7 @@
                 review_item.each(function(el,ind){
 
                     if(el>=index&&Xinner<0){
-                        $(this).removeClass('review__item_hover');
+                        $(this).removeClass('review__item_hover').removeClass('review__item_active');
                     }
 
                 });
@@ -532,6 +548,10 @@
 
         $('.detailed-card__review').mouseleave(function(){
             review_item.removeClass('review__item_hover');
+
+
+
+
             if($('.detailed-card__review').hasClass('review-active')==false){
                 $('.detailed-card__count-review span').text('0');
             }
