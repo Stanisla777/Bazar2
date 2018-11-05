@@ -2629,6 +2629,10 @@ label {
 .detailed-card__col-left {
   width: 39%;
   max-width: 436px;
+  margin-right: 40px;
+}
+.detailed-card__col-right {
+  width: calc(100% - 39% - 20px);
 }
 .detailed-card .responsive-box::before {
   content: "";
@@ -2637,9 +2641,9 @@ label {
   /* С помощью этого padding мы задаем пропорцию высоты т ширины */
 }
 .detailed-card__slider {
-  width: 100%;
+  width: 96%;
   padding: 22px;
-  top: -248px;
+  top: -245px;
   background-color: #ffffff;
   border: 1px solid #c2c2c2;
 }
@@ -2681,11 +2685,22 @@ label {
 .detailed-card__title {
   font-size: 22px;
   color: #2a2a2a;
+  margin-top: -3px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 .detailed-card__review-item {
   margin: 0 2px;
 }
+.detailed-card__wrapper {
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+}
+.detailed-card__wrapper:not(.detailed-card__wrapper-review) {
+  padding: 22px 0;
+}
 .detailed-card__wrapper-review {
+  padding: 16px 0;
   display: flex;
   align-items: center;
 }
@@ -2702,14 +2717,76 @@ label {
   content: "";
   display: block;
   width: 1px;
-  height: 10px;
-  margin: 0 5px;
+  height: 15px;
+  margin: 0 16px;
   background-color: #cccccc;
 }
 .detailed-card__add-review {
   font-size: 12px;
   color: #676767;
   cursor: pointer;
+}
+.detailed-card__wrapper-prise {
+  display: flex;
+  align-items: center;
+}
+.detailed-card__old-prise {
+  margin-right: 16px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #939393;
+}
+.detailed-card__new-prise {
+  font-size: 22px;
+}
+.detailed-card__add-cart {
+  display: flex;
+}
+.detailed-card__icons-for-visitors {
+  margin-left: 5px;
+}
+.detailed-card__wrapper-quantity {
+  align-items: center;
+  display: flex;
+  margin-top: 21px;
+}
+.detailed-card__number-purchases {
+  display: flex;
+}
+.button_orange {
+  background-color: #d58e32;
+}
+.button_orange p {
+  color: #ffffff;
+}
+.wrapper-number-purchases {
+  display: flex;
+  margin-left: 35px;
+}
+.wrapper-number-purchases > div {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper-number-purchases__count {
+  width: 73px;
+  height: 37px;
+  border: 1px solid #2a2a2a;
+}
+.wrapper-number-purchases__sign {
+  height: 37px;
+  width: 37px;
+  border: 1px solid #2a2a2a;
+  cursor: pointer;
+}
+.old-prise {
+  text-decoration: line-through;
+}
+.wrapper-new-prise {
+  color: #fff;
+  background-color: #000;
+  padding: 3px 11px;
 }
 .review {
   display: flex;

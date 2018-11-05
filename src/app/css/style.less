@@ -3040,6 +3040,10 @@ label {
   &__col-left{
     width: 39%;
     max-width: 436px;
+    margin-right: 40px;
+  }
+  &__col-right{
+    width: calc(100% - 39% - 20px);
   }
 
 
@@ -3050,9 +3054,9 @@ label {
   }
 
   &__slider{
-    width: 100%;
+    width: 96%;
     padding: 22px;
-    top: -248px;
+    top: -245px;
     background-color: #ffffff;
     border: 1px solid #c2c2c2;
   }
@@ -3098,14 +3102,26 @@ label {
   &__title{
     font-size: 22px;
     color: #2a2a2a;
+    margin-top: -3px;
+    font-weight: 600;
+    letter-spacing: 1px;
   }
   &__review-item{
     margin: 0 2px;
   }
+  &__wrapper{
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+  }
+  &__wrapper:not(&__wrapper-review){
+    padding: 22px 0;
+  }
 
   &__wrapper-review{
+    padding: 16px 0;
     display: flex;
     align-items: center;
+
   }
   &__count-review{
     display: flex;
@@ -3119,8 +3135,8 @@ label {
       content: "";
       display: block;
       width: 1px;
-      height: 10px;
-      margin: 0 5px;
+      height: 15px;
+      margin: 0 16px;
       background-color: #cccccc;
     }
   }
@@ -3130,10 +3146,85 @@ label {
       cursor: pointer;
     }
 
-
-
+}
+.detailed-card{
+  &__wrapper-prise{
+    display: flex;
+    align-items: center;
+  }
+  &__old-prise{
+    margin-right: 16px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #939393;
+  }
+  &__new-prise{
+    font-size: 22px;
+  }
+  &__add-cart{
+    display: flex;
+  }
+  &__icons-for-visitors{
+    margin-left: 5px;
+  }
+  &__wrapper-quantity{
+    display: flex;
+    align-items: center;
+    display: flex;
+    margin-top: 21px;
+  }
+  &__number-purchases{
+    display: flex;
+  }
 
 }
+.button_orange{
+  background-color: #d58e32;
+}
+.button_orange p {
+  color: #ffffff;
+}
+.wrapper-number-purchases{
+  display: flex;
+  margin-left: 35px;
+  >div{
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__count{
+    width: 73px;
+    height: 37px;
+    border: 1px solid #2a2a2a;
+  }
+  &__sign{
+    height: 37px;
+    width: 37px;
+    border: 1px solid #2a2a2a;
+    cursor: pointer;
+  }
+}
+
+
+.old-prise{
+  text-decoration: line-through;
+}
+.wrapper-new-prise{
+  color: #fff;
+  background-color: #000;
+  padding: 3px 11px;
+}
+
+
+
+
+
+
+
+
+
+
 
 //рейтинг
 .quality-rating__item_active:before {
