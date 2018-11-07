@@ -348,7 +348,6 @@ label {
 .media-close {
   width: 30px;
   height: 30px;
-  background: url("../img/icon-close.png") center no-repeat;
   background-size: contain;
   cursor: pointer;
 }
@@ -2817,6 +2816,41 @@ label {
   color: #fff;
   background-color: #000;
   padding: 3px 11px;
+}
+.wrapper-find-us-social {
+  display: flex;
+}
+.wrapper-find-us-social__item {
+  border: 1px solid #2a2a2a;
+}
+.wrapper-find-us-social__item p {
+  display: flex;
+  align-items: center;
+  color: #888888;
+  padding: 11px 15px;
+  font-size: 13px;
+  font-weight: 400;
+}
+.wrapper-find-us-social__item p:before {
+  font-family: "FontAwesome", sans-serif;
+  font-size: 15px;
+  margin-right: 10px;
+}
+.wrapper-find-us-social__share p:before {
+  content: "\f09a";
+  color: #4099ff;
+}
+.wrapper-find-us-social__google p:before {
+  content: "\f2a6+";
+  color: #d62d20;
+}
+.wrapper-find-us-social__tweet p:before {
+  content: "\f099";
+  color: #4099ff;
+}
+.wrapper-find-us-social__linkedin p:before {
+  content: "\f0e1";
+  color: #c92228;
 }
 .review {
   display: flex;

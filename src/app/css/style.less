@@ -376,7 +376,7 @@ label {
 .media-close{
     width: 30px;
     height: 30px;
-    background: url("../img/icon-close.png")center no-repeat;
+//    background: url("../img/icon-close.png")center no-repeat;
     background-size: contain;
     cursor: pointer;
 }
@@ -3249,7 +3249,42 @@ label {
   padding: 3px 11px;
 }
 
+.wrapper-find-us-social{
+  display:flex;
+  &__item{
+    border: 1px solid #2a2a2a;
+  }
+  &__item p{
+    display: flex;
+    align-items: center;
+    color: #888888;
+    padding: 11px 15px;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  &__item p:before{
+    font-family: "FontAwesome", sans-serif;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  &__share p:before{
+    content: "\f09a";
+    color: #4099ff;
+  }
+  &__google p:before{
+    content: "\f2a6+";
+    color: #d62d20;
+  }
+  &__tweet p:before{
+    content: "\f099";
+    color: #4099ff;
+  }
+  &__linkedin p:before{
+    content: "\f0e1";
+    color: #c92228;
+  }
 
+}
 
 
 
