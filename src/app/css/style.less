@@ -3037,6 +3037,10 @@ label {
 
 .detailed-card{
   background-color: #fff;
+  &__container{
+    position: relative;
+    top: -245px;
+  }
   &__col-left{
     width: 39%;
     max-width: 436px;
@@ -3056,7 +3060,7 @@ label {
   &__slider{
     width: 96%;
     padding: 22px;
-    top: -245px;
+//    top: -245px;
     background-color: #ffffff;
     border: 1px solid #c2c2c2;
   }
@@ -3111,6 +3115,9 @@ label {
   }
   &__wrapper{
     width: 100%;
+
+  }
+  &__wrapper:not(:last-child){
     border-bottom: 1px solid #cccccc;
   }
   &__wrapper:not(&__wrapper-review){
@@ -3253,6 +3260,20 @@ label {
   display:flex;
   &__item{
     border: 1px solid #2a2a2a;
+    cursor:pointer;
+  }
+  &__item:not(:last-child){
+    margin-right: 6px;
+  }
+  &__item:hover{
+    background-color: #3b5998;
+
+  }
+  &__item:hover > p{
+    color: #fff;
+  }
+  &__item:hover > p:before{
+    color: #fff;
   }
   &__item p{
     display: flex;
@@ -3283,8 +3304,77 @@ label {
     content: "\f0e1";
     color: #c92228;
   }
+  &__pinterest p:before{
+    content: "\f231";
+    color: #c92228;
+  }
+
 
 }
+
+
+
+
+.detailed-card{
+  &__wrapper-tabs{
+    margin-top: 30px;
+    background-color: #ffffff;
+    border: 1px solid #c2c2c2;
+  }
+  &__content-tabs{
+    padding: 22px;
+  }
+  &__bars{
+    display: flex;
+  }
+  &__offers-bar{
+    border-right: 1px solid #c2c2c2;
+    border-bottom: 1px solid #c2c2c2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #2a2a2a;
+    width: 15%;
+    max-width: 154px;
+    height: 53px;
+    cursor: pointer;
+  }
+  &__active-bar{
+    border-bottom:none
+  }
+
+  &__content-tab:not(&__active-tab){
+    display: none;
+  }
+  &__review-product{
+    display: flex;
+  }
+  &__content-review p{
+    font-size: 14px;
+    color: #676767;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -2625,6 +2625,10 @@ label {
 .detailed-card {
   background-color: #fff;
 }
+.detailed-card__container {
+  position: relative;
+  top: -245px;
+}
 .detailed-card__col-left {
   width: 39%;
   max-width: 436px;
@@ -2642,7 +2646,6 @@ label {
 .detailed-card__slider {
   width: 96%;
   padding: 22px;
-  top: -245px;
   background-color: #ffffff;
   border: 1px solid #c2c2c2;
 }
@@ -2693,6 +2696,8 @@ label {
 }
 .detailed-card__wrapper {
   width: 100%;
+}
+.detailed-card__wrapper:not(:last-child) {
   border-bottom: 1px solid #cccccc;
 }
 .detailed-card__wrapper:not(.detailed-card__wrapper-review) {
@@ -2822,6 +2827,19 @@ label {
 }
 .wrapper-find-us-social__item {
   border: 1px solid #2a2a2a;
+  cursor: pointer;
+}
+.wrapper-find-us-social__item:not(:last-child) {
+  margin-right: 6px;
+}
+.wrapper-find-us-social__item:hover {
+  background-color: #3b5998;
+}
+.wrapper-find-us-social__item:hover > p {
+  color: #fff;
+}
+.wrapper-find-us-social__item:hover > p:before {
+  color: #fff;
 }
 .wrapper-find-us-social__item p {
   display: flex;
@@ -2851,6 +2869,48 @@ label {
 .wrapper-find-us-social__linkedin p:before {
   content: "\f0e1";
   color: #c92228;
+}
+.wrapper-find-us-social__pinterest p:before {
+  content: "\f231";
+  color: #c92228;
+}
+.detailed-card__wrapper-tabs {
+  margin-top: 30px;
+  background-color: #ffffff;
+  border: 1px solid #c2c2c2;
+}
+.detailed-card__content-tabs {
+  padding: 22px;
+}
+.detailed-card__bars {
+  display: flex;
+}
+.detailed-card__offers-bar {
+  border-right: 1px solid #c2c2c2;
+  border-bottom: 1px solid #c2c2c2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #2a2a2a;
+  width: 15%;
+  max-width: 154px;
+  height: 53px;
+  cursor: pointer;
+}
+.detailed-card__active-bar {
+  border-bottom: none;
+}
+.detailed-card__content-tab:not(.detailed-card__active-tab) {
+  display: none;
+}
+.detailed-card__review-product {
+  display: flex;
+}
+.detailed-card__content-review p {
+  font-size: 14px;
+  color: #676767;
 }
 .review {
   display: flex;
