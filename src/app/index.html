@@ -417,26 +417,7 @@
             $(this).parents('.detailed-card__pagers').siblings('.detailed-card__main-img').attr('href',src)
         });
 
-
-        var massive = [];
-
-        //Привет
-
-
-
-        // $('.detailed-card__pager').each(function (index,value) {
-        //     var et =$(this);
-        //     massive.push(et)
-        // })
-        // console.log(massive)
-
-
-
-        // $('.detailed-card__pager').each(function (index,value) {
-        //
-        //
-        // }
-
+        var fal = false;
 
         $('.detailed-card__main-img').mouseenter(function(){
             $(this).siblings('.detailed-card__pagers').find('.detailed-card__pager').each(function (index,value) {
@@ -444,45 +425,32 @@
             });
 
             $(this).addClass('fancy-detailed-card');
-                $('.fancy-detailed-card').fancybox({
-
-                "openEffect":"fade",
-                "closeEffect ":"fade",
-                "nextEffect":"fade",
-                "prevEffect":"fade",
-                "padding":[5,5,5,5]
-
-            });
+            fancy();
         });
 
-        // $('.detailed-card__main-img').on('click',function (e) {
-        //     e.preventDefault()
-        //
-        //
-        // });
+        $('.detailed-card__main-img').mouseleave(function(){
+            $(this).siblings('.detailed-card__pagers').find('.detailed-card__pager').each(function (index,value) {
+                $(this).removeClass('fancy-detailed-card')
+            });
+            $(this).removeClass('fancy-detailed-card');
 
-        // $(".fancy-detailed-car").fancybox({
-        //
-        //     "openEffect":"fade",
-        //     "closeEffect ":"fade",
-        //     "nextEffect":"fade",
-        //     "prevEffect":"fade",
-        //     "padding":[5,5,5,5]
-        //
-        // });
+            fancy=false;
+        });
 
 
 
+            function fancy(){
+                $(".fancy-detailed-card").fancybox({
 
-            // $(".fancy-detailed-card").fancybox({
-            //
-            //     "openEffect":"fade",
-            //     "closeEffect ":"fade",
-            //     "nextEffect":"fade",
-            //     "prevEffect":"fade",
-            //     "padding":[5,5,5,5]
-            //
-            // });
+                    "openEffect":"fade",
+                    "closeEffect ":"fade",
+                    "nextEffect":"fade",
+                    "prevEffect":"fade",
+                    "padding":[5,5,5,5]
+
+                });
+            }
+
 
 
 
