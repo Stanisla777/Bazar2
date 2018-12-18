@@ -155,7 +155,7 @@
                             <div class="detailed-card__col-left">
 
 
-                                <a rel="group_1"  href="img/good-1.jpg" class=" detailed-card__main-img">
+                                <a rel="group_1"  href="img/good-1.jpg" class="fancy-detailed-card detailed-card__main-img">
                                     <img src="img/good-1.jpg" alt=""/>
                                 </a>
 
@@ -458,13 +458,33 @@
     </section>
 
 
+    <!--Мой фэнсибокс-->
+
+    <div class="modal-window">
+
+        <div class="modal-window__container">
+            <div class="close-menu">x</div>
+            <div class="modal-arrow-left"><</div>
+            <div class="modal-arrow-right">></div>
 
 
+
+            <div class="modal-window__body">
+                <img src="" alt=""/>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div id="lean_overlay"></div>
+
+    <!--Мой фэнсибокс-->
 
 
 
     <section style="height: 400px;"></section>
-    <!--Привет-->
+
 
 
 
@@ -478,52 +498,160 @@
 <script>
     $(document).ready(function () {
 
+
+
+        // var massive=["img/good-1.jpg","img/good-2.jpg","img/good-3.jpg","img/good-4.jpg","img/good-5.jpg","img/good-6.jpg","img/good-7.jpg","img/good-8.jpg",];
+
+        //по клику на элемент собираю массив из картинок для фавикона
+        var massive=[];
+        var index_img =0;
+        var src_img;
+        $('.detailed-card__col-left').on('click',function () {
+            $(this).find('.detailed-card__pager').each(function () {
+                src_img = $(this).find('img').attr('src');
+                massive.push(src_img)
+            })
+        });
+        console.log(massive);
+
+
+        //Подставил картинку из пэджера
         $('.detailed-card__pagers .detailed-card__pager').on('click',function(e){
             e.preventDefault();
-
+            index_img = $(this).parent().index();//получил индекс картинки по которой кликнул
+            console.log(index_img);
             var src  = $(this).find('img').attr('src');
             $(this).parents('.detailed-card__pagers').siblings('.detailed-card__main-img').find('img').attr('src',src);
             $(this).parents('.detailed-card__pagers').siblings('.detailed-card__main-img').attr('href',src)
         });
 
-        var fal = false;
-
-        $('.detailed-card__main-img').mouseenter(function(){
-            $(this).siblings('.detailed-card__pagers').find('.detailed-card__pager').each(function (index,value) {
-                $(this).addClass('fancy-detailed-card')
-            });
-
-            $(this).addClass('fancy-detailed-card');
-            fancy();
+        //кликнул по большой карьтинке и открыл модальное окно моего фэнсибокс
+        $('.detailed-card__main-img').on('click',function(e){//Открываю модально окно по клику
+            console.log(index_img);
+            e.preventDefault();
+            $('.modal-window').css('display','flex');
+            $('#lean_overlay').show();//фон затемнение
+            console.log(index_img);
+            //подставляю в него картинку по которой кликнули и индекс, кторой получили при первом клике по пейджеру
+            $('.modal-window__body img').attr('src',massive[index_img])
         });
 
-        $('.detailed-card__main-img').mouseleave(function(){
-            $(this).siblings('.detailed-card__pagers').find('.detailed-card__pager').each(function (index,value) {
-                $(this).removeClass('fancy-detailed-card')
-            });
-            $(this).removeClass('fancy-detailed-card');
+        //кликанье по стрелочкам
+        $('.modal-window .modal-arrow-right').on('click',function () {
+            console.log(index_img);
+            index_img+=1;
+            var elem_img = massive[index_img];
+            $('.modal-window__body img').attr('src',elem_img);
+            console.log(index_img);
+        });
 
-            fancy=false;
+        $('.modal-window .modal-arrow-left').on('click',function () {
+            console.log(index_img);
+            index_img-=1;
+            var elem_img = massive[index_img];
+            $('.modal-window__body img').attr('src',elem_img);
+            console.log(index_img);
+        });
+
+        //Закрываю модалку и подставляю картинку, которая сейчас в фэнсибокс
+        $('.close-menu, .modal-window__button').on('click',function(){//Закрываю модальное окно по клику на крестик
+            $('.modal-window').css('display','none');
+            $('#lean_overlay').hide();
+            $('.detailed-card__main-img img').attr('src',massive[index_img]);
+        });
+
+
+        //Закрываю модальное окно по клику рабочей области и подставляю картинку, которая сейчас в фэнсибокс
+
+        $('.modal-window').on('click', function (e) {//Закрываю модальное окно по клику рабочей области
+            $('.modal-window').css('display', 'none');
+            $("#lean_overlay").hide();
+            $('.detailed-card__main-img img').attr('src',massive[index_img]);
+        }).on('click', '.modal-window__container', function (e) {//Запрещаю закрывать окно по клику на само молдальное окно
+            e.stopPropagation();
+
         });
 
 
 
-            function fancy(){
-                $(".fancy-detailed-card").fancybox({
-
-                    "openEffect":"fade",
-                    "closeEffect ":"fade",
-                    "nextEffect":"fade",
-                    "prevEffect":"fade",
-                    "padding":[5,5,5,5]
-
-                });
-            }
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // $('.detailed-card__main-img').mouseenter(function(){
+        //     $(this).siblings('.detailed-card__pagers').find('.detailed-card__pager').each(function (index,value) {
+        //         $(this).addClass('fancy-detailed-card')
+        //     });
+        //
+        //     $(this).addClass('fancy-detailed-card');
+        //     // fancy();
+        // });
+        //
+        // $('.detailed-card__main-img').mouseleave(function(){
+        //     $(this).siblings('.detailed-card__pagers').find('.detailed-card__pager').each(function (index,value) {
+        //         $(this).removeClass('fancy-detailed-card')
+        //     });
+        //     $(this).removeClass('fancy-detailed-card');
+        //
+        // });
+
+
+
+
+        // var massive = ["img/good-1.jpg","img/good-2.jpg","img/good-3.jpg"];
+        // $('.detailed-card__main-img').on('click',function () {
+        //
+        // });
+
+
+        function fancy(){
+            $('.fancy-detailed-card').fancybox({
+
+                "openEffect":"fade",
+                "closeEffect ":"fade",
+                "nextEffect":"fade",
+                "prevEffect":"fade",
+                "padding":[5,5,5,5],
+                afterLoad : function() {
+                    // $(this).siblings('.detailed-card__pagers').find('.detailed-card__pager').each(function (index,value) {
+                    //             $(this).addClass('fancy-detailed-card')
+                    //         });
+
+                    console.log()
+                }
+
+            });
+        }
+
+
+
+
+        // fancy();
 
 
 
