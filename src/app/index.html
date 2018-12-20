@@ -517,19 +517,17 @@
             massive.push(src_img)
         });
 
-        console.log(massive);
 
         //Подставил картинку из пэджера
         $('.detailed-card__pagers .detailed-card__pager').on('click',function(e){
             e.preventDefault();
             index_img = $(this).parent().index();//получил индекс картинки по которой кликнул
-            // console.log(index_img);
             var src  = $(this).find('img').attr('src');
             $(this).parents('.detailed-card__pagers').siblings('.detailed-card__main-img').find('img').attr('src',src);
             $(this).parents('.detailed-card__pagers').siblings('.detailed-card__main-img').attr('href',src)
         });
 
-        //кликнул по большой карьтинке и открыл модальное окно моего фэнсибокс
+        //кликнул по большой картинке и открыл модальное окно моего фэнсибокс
         $('.detailed-card__main-img').on('click',function(e){//Открываю модально окно по клику
             // console.log(index_img);
             e.preventDefault();
@@ -542,20 +540,18 @@
 
         //кликанье по стрелочкам
         $('.modal-window .modal-arrow-right').on('click',function (event) {
-            // console.log(index_img);
-            if(index_img<massive.length){
+
+            if(index_img!==massive.length-1){
                 index_img+=1;
                 elem_img = massive[index_img];//записываю в переменную картинку из массива
-                // $('.modal-window__body img').attr('src',elem_img);
+                console.log(index_img);
             }
-            else if(index_img===massive.length) {
+
+            else {
                 index_img=0;
-                // $('.modal-window__body img').attr('src',elem_img);
+                elem_img = massive[index_img];//записываю в переменную картинку из массива
             }
             $('.modal-window__body img').attr('src',elem_img);
-            console.log(elem_img);
-
-            console.log(index_img);
 
         });
 
@@ -565,16 +561,14 @@
             if(index_img!==0){
                 index_img-=1;
                 var elem_img = massive[index_img];
-                $('.modal-window__body img').attr('src',elem_img);
+
             }
 
             else {
-                return false;
+                index_img=massive.length-1;
+                elem_img = massive[index_img];//записываю в переменную картинку из массива
             }
-
-            console.log(elem_img);
-
-            console.log(index_img);
+            $('.modal-window__body img').attr('src',elem_img);
         });
 
         //Закрываю модалку и подставляю картинку, которая сейчас в фэнсибокс
