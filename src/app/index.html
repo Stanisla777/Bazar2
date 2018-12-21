@@ -11,7 +11,8 @@
     <meta name="keywords" content="">
     <link href="css/FontAwesoome/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/owl.carousel.css"/>
-    <link rel="stylesheet" href="http://yandex.st/jquery/fancybox/2.1.4/jquery.fancybox.css"/>
+
+    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css"/>
 
@@ -462,16 +463,23 @@
 
     <!--Мой фэнсибокс-->
 
-    <div class="modal-window">
+    <div class="fancy-window">
 
-        <div class="modal-window__container">
-            <div class="close-menu">x</div>
-            <div class="modal-arrow-left"><</div>
-            <div class="modal-arrow-right">></div>
+        <div class="fancy-window__container">
+            <div class="close-menu">
+                <!--<i class="fas fa-times" style="font-size: 48px;"></i>-->
+            </div>
+            <div class="fancy-arrow fancy-arrow-left">
+                <i class="fas fa-chevron-circle-left"></i>
+            </div>
+            <div class="fancy-arrow fancy-arrow-right">
+
+                <i class="fas fa-chevron-circle-right"></i>
+            </div>
 
 
 
-            <div class="modal-window__body">
+            <div class="fancy-window__body">
                 <img src="" alt=""/>
 
             </div>
@@ -531,33 +539,41 @@
         $('.detailed-card__main-img').on('click',function(e){//Открываю модально окно по клику
             // console.log(index_img);
             e.preventDefault();
-            $('.modal-window').css('display','flex');
+            $('.fancy-window').css('display','flex');
+            $('.fancy-window__container').addClass('zoomIn');
+
             $('#lean_overlay').show();//фон затемнение
             console.log(index_img);
             //подставляю в него картинку по которой кликнули и индекс, кторой получили при первом клике по пейджеру
-            $('.modal-window__body img').attr('src',massive[index_img])
+            $('.fancy-window__body img').attr('src',massive[index_img])
         });
 
         //кликанье по стрелочкам
-        $('.modal-window .modal-arrow-right').on('click',function (event) {
-
+        $('.fancy-window .fancy-arrow-right').on('click',function (event) {
+            //
             if(index_img!==massive.length-1){
                 index_img+=1;
                 elem_img = massive[index_img];//записываю в переменную картинку из массива
                 console.log(index_img);
+
             }
 
             else {
                 index_img=0;
                 elem_img = massive[index_img];//записываю в переменную картинку из массива
             }
-            $('.modal-window__body img').attr('src',elem_img);
+
+
+            //если хочу с эффектом
+            $('.fancy-window__body img').replaceWith('<img class="zoomIn" src="'+elem_img+'" alt="">').attr('src',elem_img);
+
+
+            //если хочу без эффекта
+            // $('.fancy-window__body img').attr('src',elem_img);
 
         });
 
-        $('.modal-window .modal-arrow-left').on('click',function () {
-            // console.log(index_img);
-
+        $('.fancy-window .fancy-arrow-left').on('click',function () {
             if(index_img!==0){
                 index_img-=1;
                 var elem_img = massive[index_img];
@@ -568,12 +584,18 @@
                 index_img=massive.length-1;
                 elem_img = massive[index_img];//записываю в переменную картинку из массива
             }
-            $('.modal-window__body img').attr('src',elem_img);
+
+            //если хочу с эффектом
+            $('.fancy-window__body img').replaceWith('<img class="zoomIn" src="'+elem_img+'" alt="">').attr('src',elem_img);
+
+
+            //если хочу без эффекта
+            // $('.fancy-window__body img').attr('src',elem_img);
         });
 
         //Закрываю модалку и подставляю картинку, которая сейчас в фэнсибокс
         $('.close-menu, .modal-window__button').on('click',function(){//Закрываю модальное окно по клику на крестик
-            $('.modal-window').css('display','none');
+            $('.fancy-window').css('display','none');
             $('#lean_overlay').hide();
             $('.detailed-card__main-img img').attr('src',massive[index_img]);
         });
@@ -581,11 +603,11 @@
 
         //Закрываю модальное окно по клику рабочей области и подставляю картинку, которая сейчас в фэнсибокс
 
-        $('.modal-window').on('click', function (e) {//Закрываю модальное окно по клику рабочей области
-            $('.modal-window').css('display', 'none');
+        $('.fancy-window').on('click', function (e) {//Закрываю модальное окно по клику рабочей области
+            $('.fancy-window').css('display', 'none').addClass('zoomIn');
             $("#lean_overlay").hide();
             $('.detailed-card__main-img img').attr('src',massive[index_img]);
-        }).on('click', '.modal-window__container', function (e) {//Запрещаю закрывать окно по клику на само молдальное окно
+        }).on('click', '.fancy-window__container', function (e) {//Запрещаю закрывать окно по клику на само молдальное окно
             e.stopPropagation();
 
         });
