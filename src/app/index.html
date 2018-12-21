@@ -537,13 +537,15 @@
 
         //кликнул по большой картинке и открыл модальное окно моего фэнсибокс
         $('.detailed-card__main-img').on('click',function(e){//Открываю модально окно по клику
-            // console.log(index_img);
+
             e.preventDefault();
-            $('.fancy-window').css('display','flex');
-            $('.fancy-window__container').addClass('zoomIn');
+            $('.fancy-window').css({
+                'display':'flex'
+            });
+            $('.fancy-window').removeClass('zoomOut');
+            $('.fancy-window').addClass('zoomIn');
 
             $('#lean_overlay').show();//фон затемнение
-            console.log(index_img);
             //подставляю в него картинку по которой кликнули и индекс, кторой получили при первом клике по пейджеру
             $('.fancy-window__body img').attr('src',massive[index_img])
         });
@@ -595,7 +597,15 @@
 
         //Закрываю модалку и подставляю картинку, которая сейчас в фэнсибокс
         $('.close-menu, .modal-window__button').on('click',function(){//Закрываю модальное окно по клику на крестик
-            $('.fancy-window').css('display','none');
+
+
+
+            $('.fancy-window').removeClass('zoomIn');
+            $('.fancy-window').addClass('zoomOut');
+            // $('.fancy-window').css({"display": "none"});
+            // if($('.fancy-window').hasClass('zoomOut')){
+            //     $('.fancy-window').hide()
+            // }
             $('#lean_overlay').hide();
             $('.detailed-card__main-img img').attr('src',massive[index_img]);
         });
@@ -604,7 +614,7 @@
         //Закрываю модальное окно по клику рабочей области и подставляю картинку, которая сейчас в фэнсибокс
 
         $('.fancy-window').on('click', function (e) {//Закрываю модальное окно по клику рабочей области
-            $('.fancy-window').css('display', 'none').addClass('zoomIn');
+            $('.fancy-window').css('display', 'none');
             $("#lean_overlay").hide();
             $('.detailed-card__main-img img').attr('src',massive[index_img]);
         }).on('click', '.fancy-window__container', function (e) {//Запрещаю закрывать окно по клику на само молдальное окно
@@ -812,25 +822,10 @@
                 $(this).siblings('.detailed-card__count-review span').text('0');
             }
 
-        })
+        });
         $('.detailed-card__review').mouseenter(function(){
             $(this).find('.review__item').removeClass('review__item_active');
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     });
 </script>
